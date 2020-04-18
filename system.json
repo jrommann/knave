@@ -2,7 +2,7 @@
   "name": "knave",
   "title": "Knave",
   "description": "A minimalist d20 system by Ben Milton.",
-  "version": 0.34,
+  "version": 0.1,
   "minimumCoreVersion": "0.5.2",
   "compatibleCoreVersion": "0.5.5",
   "templateVersion": 2,

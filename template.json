@@ -8,18 +8,51 @@
     {
       "STR":{}, "DEX":{}, "CON":{}, "INT":{}, "WIS":{}, "CHA":{},
       "Armor":{}, "Health":{}, "Max Health":{}
+    },
+    "npcStats":
+    {
+      "Morale":{}
     }
   },
   "player": {"templates":["baseStats"]},
-  "npc": {"templates":["baseStats"]}  
+  "npc": {"templates":["baseStats", "npcStats"]}  
 },
-"Item": {
-  "types": ["item"],
-  "item": {
-    "description": "",
-    "quantity": 1,
-    "weight": 0,
-    "attributes": {}
+"Item": 
+{
+  "types": ["item", "light", "armor", "meleeWeapon", "rangeWeapon"],
+  "templates":
+  {
+    "baseItem": 
+    {
+      "description": "",      
+      "slots": 1,
+      "cost": 0    
+    },    
+    "quality":{"quality":1},
+    "damage":{"damage":1}  
+  },
+  "item":
+  {
+    "templates":["baseItem"]    
+  },
+  "light":
+  {
+    "templates":["baseItem"],
+    "hours":1
+  },
+  "armor":
+  {
+    "templates":["baseItem", "quality"],
+    "defense":1    
+  },
+  "meleeWeapon":
+  {
+    "templates":["baseItem", "quality", "damage"]    
+  },
+  "rangeWeapon":
+  {
+    "templates":["baseItem", "quality", "damage"],
+    "ammo":0       
   }
 }
 }
