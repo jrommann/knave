@@ -17,7 +17,7 @@
             <span class="resource-label">DEFENSE</span><span class="resource-label"></span><span class="resource-label">BONUS</span>  
             <input type="text" name="data.armor.value" value="{{data.armor.value}}" data-dtype="Number"/>       
             <span class="resource-label center">ARMOR</span>                 
-            <span>{{numberFormat data.armor.defense decimals=0 sign=true}}</span>       
+            <span>{{data.armor.bonus}}</span>      
           </div>
         </div>
       
@@ -53,7 +53,7 @@
       </div>
      
       <div class="flex-group-center">
-      {{!-- Owned Items Tab --}}
+      {{!-- Owned Items Tab --}}      
       <div class="items" data-group="primary" data-tab="items">
           <ol class="items-list">
               <li class="item flexrow item-header">
