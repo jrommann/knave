@@ -115,8 +115,8 @@
 
 .knave .sheet-header {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 210px;
-  flex: 0 0 210px;
+  -ms-flex: 0 0 120px;
+  flex: 0 0 120px;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;

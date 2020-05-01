@@ -9,9 +9,9 @@ export class KnaveActorSheet extends ActorSheet {
     return mergeObject(super.defaultOptions, {
       classes: ["knave", "sheet", "actor"],
       template: "systems/knave/templates/actor/actor-sheet.html",
-      width: 600,
-      height: 600,
-      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
+      width: 1000,
+      height: 500,
+      /*tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]*/
     });
   }
 
