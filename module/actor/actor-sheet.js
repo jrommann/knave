@@ -18,15 +18,18 @@ export class KnaveActorSheet extends ActorSheet {
   /* -------------------------------------------- */
 
   /** @override */
-  getData() {
+  /*
+  getData() 
+  {
     const data = super.getData();
     data.dtypes = ["String", "Number", "Boolean"];
-    for (let attr of Object.values(data.data.attributes)) {
+    for (let attr of Object.values(data.data.attributes))
+    {
       attr.isCheckbox = attr.dtype === "Boolean";
     }
     return data;
   }
-
+*/
   /** @override */
   activateListeners(html) {
     super.activateListeners(html);

@@ -28,7 +28,7 @@ export class KnaveActor extends Actor {
 
     // Make modifications to data here. For example:
     data.armor.bonus = Number(data.armor.value) - Number(10);
-    data.slots.value = Number(data.con.value) + Number(10);
+    data.inventorySlots.value = Number(data.abilities.con.value) + Number(10);
 
     // Loop through ability scores, and add their modifiers to our sheet output.
     for (let [key, ability] of Object.entries(data.abilities)) 

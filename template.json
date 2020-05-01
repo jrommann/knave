@@ -1,32 +1,35 @@
 {
-  "Actor": {
-    "types": ["character"],
-    "templates": 
+"Actor": 
+{
+  "types": ["character"],
+  "templates": 
+  {
+    "base": 
     {
-      "base": 
+      "health": 
       {
-        "health": 
-        {
-          "value": 8,
-          "min": 0,
-          "max": 8
-        },   
-        "armor": 
-        {
-          "value": 11,  
-          "bonus": 1               
-        },   
-        "xp":
-        {
-          "value": 0
-        },     
+        "value": 8,
+        "min": 0,
+        "max": 8
+      },   
+      "armor": 
+      {
+        "value": 11,  
+        "bonus": 1               
+      },   
+      "xp":
+      {
+        "value": 0
+      },     
+      "abilities":
+      {
         "str": 
         {
           "value": 0,
           "max":10
         },
         "dex":
-         {
+        {
           "value": 0,
           "max":10
         },
@@ -46,44 +49,54 @@
           "max":10
         },
         "cha":
-         {
+        {
           "value": 0,
           "max":10
-        }              
-      }
-    },
-    "character": 
-    {
-      "templates": ["base"],
-      "biography": "",
-      "level":
-      {
-        "value": 1,
-        "min":1,
-        "max":10
-      } ,
-      "slots":
-      {              
-        "value":0,
-        "max":20
-      }
+        }  
+      }            
     }
+  },
+  "character": 
+  {
+    "templates": ["base"],
+    "biography": "", 
+    "level":
+    {
+      "value": 1,
+      "min":1,
+      "max":10
+    },
+    "inventorySlots":
+    {              
+      "used":0,
+      "value":0,
+      "max":20
+    }    
   },
   "Item": 
   {
-    "types": ["item"],
+    "types": ["item", "weapon"],
     "templates": 
     {
       "base": 
       {
-        "description": ""
+        "name": "",
+        "description": "",
+        "quantity": 1,
+        "weight": 0,
+        "slots": 1,
+        "coppers":0
       }
     },
     "item":
     {
-      "templates": ["base"],
-      "quantity": 1,
-      "weight": 0
-    }
+      "templates": ["base", "cost"]      
+    },
+    "weapon":
+    {
+      "templates":["base"],
+      "damageDice":"1d3"
+    }    
   }
+}
 }
