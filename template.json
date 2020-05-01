@@ -75,7 +75,7 @@
   },
   "Item": 
   {
-    "types": ["item", "weapon"],
+    "types": ["general", "weapon"],
     "templates": 
     {
       "base": 
@@ -88,7 +88,7 @@
         "coppers":0
       }
     },
-    "item":
+    "general":
     {
       "templates": ["base", "cost"]      
     },

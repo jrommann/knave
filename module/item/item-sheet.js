@@ -10,7 +10,8 @@ export class KnaveItemSheet extends ItemSheet {
       classes: ["knave", "sheet", "item"],
       width: 520,
       height: 480,
-      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
+      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }],
+      submitOnChange: false,
     });
   }
 
@@ -21,6 +22,8 @@ export class KnaveItemSheet extends ItemSheet {
     //return `${path}/item-sheet.html`;
     // Alternatively, you could use the following return statement to do a
     // unique item sheet by type, like `weapon-sheet.html`.
+
+    console.debug(this.item.data.type);
 
     return `${path}/${this.item.data.type}-sheet.html`;
   }
