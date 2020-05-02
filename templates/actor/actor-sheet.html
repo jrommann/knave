@@ -1,8 +1,9 @@
 <form class="{{cssClass}} flexcol" autocomplete="off">
-<div class="grid grid-3col">
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+  <div class="grid grid-3col">
   <div class="flex-group-center">    
-    {{!-- Sheet Body --}}
-    <section class="sheet-body">
+    
       <div class="flex-group-center">
         <div class="abilities grid grid-3col">         
           <span class="resource-label">CURRENT</span> <span class="resource-label"></span><span class="resource-label">MAX</span>                                   
@@ -50,7 +51,7 @@
                           
               <label for="data.biography.value" class="resource-label">Description</label>  
               <textarea name="data.biography" rows="5" title="Description" data-dtype="String">
-                {{#if data.biography}}{{data.biography}}{{/if}}
+                {{data.biography}}
               </textarea>
           </div>
       </div>
@@ -78,9 +79,9 @@
               </li>
           {{/each}}
           </ol>
-      </div>      
-    </section>
+      </div>          
   </div>
   </div>
+</section>
 </form>
 

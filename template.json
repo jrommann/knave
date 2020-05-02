@@ -76,7 +76,7 @@
   },
   "Item":
   {
-    "types": ["item", "weapon"],
+    "types": ["item", "weaponMelee", "weaponRanged", "armor", "light"],
     "templates":
     {
       "base":
@@ -85,21 +85,44 @@
         "description": "",
         "quantity": 1,
         "slots": 1,
-        "coppers":0
+        "coppers":1
       },
       "quality":
       {
         "quality": { "value":1, "min":0}
+      },
+      "weapon":
+      {
+        "damageDice":"1d3"
       }
     },
     "item":
     {
       "templates": ["base"]
     },
-    "weapon":
+    "weaponMelee":
+    {
+      "templates":["base", "quality", "weapon"]      
+    },
+    "weaponRanged":
+    {
+      "templates":["base", "quality", "weapon"],      
+      "ammo":
+      {
+        "value":0,
+        "min":0,
+        "max":0
+      }
+    },
+    "armor":
     {
       "templates":["base", "quality"],
-      "damageDice":"1d3"
+      "defense": 11
+    },
+    "light":
+    {
+      "templates": ["base"],
+      "duration": 1
     }
   }
 }
