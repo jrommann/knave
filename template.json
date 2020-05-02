@@ -1,102 +1,105 @@
 {
-"Actor": 
-{
-  "types": ["character"],
-  "templates": 
+  "Actor":
   {
-    "base": 
+    "types": ["character"],
+    "templates":
     {
-      "health": 
+      "base":
       {
-        "value": 8,
-        "min": 0,
-        "max": 8
-      },   
-      "armor": 
+        "health":
+        {
+          "value": 8,
+          "min": 0,
+          "max": 8
+        },
+        "armor":
+        {
+          "value": 11,
+          "bonus": 1
+        },
+        "xp":
+        {
+          "value": 0
+        },
+        "abilities":
+        {
+          "str":
+          {
+            "value": 0,
+            "max":10
+          },
+          "dex":
+          {
+            "value": 0,
+            "max":10
+          },
+          "con":
+          {
+            "value": 0,
+            "max":10
+          },
+          "int":
+          {
+            "value": 0,
+            "max":10
+          },
+          "wis":
+          {
+            "value": 0,
+            "max":10
+          },
+          "cha":
+          {
+            "value": 0,
+            "max":10
+          }
+        }
+      }
+    },
+    "character":
+    {
+      "templates": ["base"],
+      "biography": "",
+      "level":
       {
-        "value": 11,  
-        "bonus": 1               
-      },   
-      "xp":
+        "value": 1,
+        "min":1,
+        "max":10
+      },
+      "inventorySlots":
       {
-        "value": 0
-      },     
-      "abilities":
-      {
-        "str": 
-        {
-          "value": 0,
-          "max":10
-        },
-        "dex":
-        {
-          "value": 0,
-          "max":10
-        },
-        "con": 
-        {
-          "value": 0,
-          "max":10
-        },
-        "int": 
-        {
-          "value": 0,
-          "max":10
-        },
-        "wis": 
-        {
-          "value": 0,
-          "max":10
-        },
-        "cha":
-        {
-          "value": 0,
-          "max":10
-        }  
-      }            
+        "used":0,
+        "value":0,
+        "max":20
+      }
     }
   },
-  "character": 
+  "Item":
   {
-    "templates": ["base"],
-    "biography": "", 
-    "level":
+    "types": ["item", "weapon"],
+    "templates":
     {
-      "value": 1,
-      "min":1,
-      "max":10
-    },
-    "inventorySlots":
-    {              
-      "used":0,
-      "value":0,
-      "max":20
-    }    
-  },
-  "Item": 
-  {
-    "types": ["general", "weapon"],
-    "templates": 
-    {
-      "base": 
+      "base":
       {
         "name": "",
         "description": "",
         "quantity": 1,
-        "weight": 0,
         "slots": 1,
         "coppers":0
+      },
+      "quality":
+      {
+        "quality": { "value":1, "min":0}
       }
     },
-    "general":
+    "item":
     {
-      "templates": ["base", "cost"]      
+      "templates": ["base"]
     },
     "weapon":
     {
-      "templates":["base"],
+      "templates":["base", "quality"],
       "damageDice":"1d3"
-    }    
+    }
   }
-}
 }

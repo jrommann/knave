@@ -10,20 +10,18 @@ export class KnaveItemSheet extends ItemSheet {
       classes: ["knave", "sheet", "item"],
       width: 520,
       height: 480,
-      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }],
-      submitOnChange: false,
+      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]      
     });
   }
 
   /** @override */
-  get template() {
+  get template() 
+  {
     const path = "systems/knave/templates/item";
     // Return a single sheet for all item types.
     //return `${path}/item-sheet.html`;
     // Alternatively, you could use the following return statement to do a
     // unique item sheet by type, like `weapon-sheet.html`.
-
-    console.debug(this.item.data.type);
 
     return `${path}/${this.item.data.type}-sheet.html`;
   }
@@ -33,6 +31,7 @@ export class KnaveItemSheet extends ItemSheet {
   /** @override */
   getData() {
     const data = super.getData();
+    data.dtypes = ["String", "Number", "Boolean"];
     return data;
   }
 
