@@ -26,8 +26,8 @@
           <div class="abilities grid grid-3col">   
             <span class="resource-label">DEFENSE</span><span class="resource-label">ABILITY</span><span class="resource-label">BONUS</span>            
               {{#each data.abilities as |ability key|}}            
-              <span class="ability-mod">{{numberFormat ability.defense decimals=0 sign=false}}</span>                
-              <label for="data.abilities.{{key}}.value" class="resource-label">{{key}}</label>
+              <span class="ability-mod">{{numberFormat ability.defense decimals=0 sign=false}}</span>                              
+              <button class="knave-abiliyy-button resource-label">{{key}}</button>
               <input type="text" name="data.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number" maxlength="2" max="10" min="-10"/>            
               {{/each}}
           </div>
