@@ -40,6 +40,9 @@ export class KnaveActorSheet extends ActorSheet {
     // Add Inventory Item
     html.find('.item-create').click(this._onItemCreate.bind(this));
 
+    //ability button clicked
+    html.find('.knave-ability-button').click(ev => { this._onAbility_Clicked($(ev.currentTarget)[0].id); });
+
     // Update Inventory Item
     html.find('.item-edit').click(ev => {
       const li = $(ev.currentTarget).parents(".item");
@@ -84,4 +87,30 @@ export class KnaveActorSheet extends ActorSheet {
     return this.actor.createOwnedItem(itemData);
   }
 
+  _onAbility_Clicked(ability)
+  {
+    let score = 0;
+    let name = "";
+    switch(ability)
+    {
+      case "str": score = this.actor.data.data.abilities.str.value; name="STR"; break;
+      case "dex": score = this.actor.data.data.abilities.dex.value; name="DEX"; break;
+      case "con": score = this.actor.data.data.abilities.con.value; name="CON"; break;
+      case "int": score = this.actor.data.data.abilities.int.value; name="INT"; break;
+      case "wis": score = this.actor.data.data.abilities.wis.value; name="WIS"; break;
+      case "cha": score = this.actor.data.data.abilities.cha.value; name="CHA"; break;
+    }    
+  
+    let messageContent = '';
+    let messageHeader = "<b>" + name + "</b><br>";
+    let chatData = 
+    {
+      user: game.user._id,
+      speaker: this.actor.name,
+      content: messageHeader + messageContent,      
+    };
+
+    let r = new Roll("1d20 + @score", {score});
+    r.toMessage(chatData);
+  }
 }
