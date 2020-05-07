@@ -101,16 +101,19 @@ export class KnaveActorSheet extends ActorSheet {
       case "cha": score = this.actor.data.data.abilities.cha.value; name="CHA"; break;
     }    
   
-    let messageContent = '';
+    let formula = `1d20+${score}`;
+    let r = new Roll(formula);    
+    r.roll();
+   
     let messageHeader = "<b>" + name + "</b><br>";
     let chatData = 
     {
-      user: game.user._id,
-      speaker: this.actor.name,
-      content: messageHeader + messageContent,      
+        user: game.user._id,
+        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+        flavor: messageHeader,
+        _roll: r,
+        isRollVisible: true
     };
-
-    let r = new Roll("1d20 + @score", {score});
     r.toMessage(chatData);
   }
 }
