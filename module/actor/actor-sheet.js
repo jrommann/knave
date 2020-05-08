@@ -10,7 +10,7 @@ export class KnaveActorSheet extends ActorSheet {
       classes: ["knave", "sheet", "actor"],
       template: "systems/knave/templates/actor/actor-sheet.html",
       width: 1000,
-      height: 500,
+      height: 600,
       /*tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]*/
     });
   }
@@ -105,7 +105,14 @@ export class KnaveActorSheet extends ActorSheet {
     let r = new Roll(formula);    
     r.roll();
    
-    let messageHeader = "<b>" + name + "</b><br>";
+    let messageHeader = "<b>" + name + "</b>";
+
+    if(r.dice[0].total === 1)
+      messageHeader += ' - <span class="knave-ability-crit knave-ability-critFailure">CRITICAL FAILURE!</span>';
+    else if(r.dice[0].total === 20)
+      messageHeader += ' - <span class="knave-ability-crit knave-ability-critSuccess">CRITICAL SUCCESS!</span>';
+
+    messageHeader += "<br>"
     let chatData = 
     {
         user: game.user._id,

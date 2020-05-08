@@ -242,3 +242,18 @@
 }
 
 .knave-ability-button {width: 60px; height: 28px;}
+
+.knave-ability-crit
+{
+  font-size: 1.2em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.knave-ability-critSuccess 
+{
+  color: green;
+}
+.knave-ability-critFailure 
+{
+  color: red;
+}
