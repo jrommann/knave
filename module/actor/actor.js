@@ -26,9 +26,17 @@ export class KnaveActor extends Actor {
   {
     const data = actorData.data;
 
-    // Make modifications to data here. For example:
+    //calculate armor bonus
     data.armor.bonus = Number(data.armor.value) - Number(10);
+
+    //calculate max inventory slots and used slots
     data.inventorySlots.value = Number(data.abilities.con.value) + Number(10);
+    let used = 0;
+    for(let i of actorData.items)
+    {
+      used += i.data.slots;
+    }
+    data.inventorySlots.used = used;
 
     // Loop through ability scores, and add their modifiers to our sheet output.
     for (let [key, ability] of Object.entries(data.abilities)) 
