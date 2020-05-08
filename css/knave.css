@@ -241,6 +241,11 @@
   text-align: right;
 }
 
+.knave .item-roll img:hover 
+{
+    opacity: .5;
+}
+
 .knave-ability-button {width: 60px; height: 28px;}
 .knave-morale-button {width: 70px; height: 28px;}
 
@@ -269,5 +274,3 @@
   min-height: 200px;
   resize: none;
 }
-
-
