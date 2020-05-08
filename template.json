@@ -96,7 +96,7 @@
       },
       "quality":
       {
-        "quality": { "value":1, "min":0}
+        "quality": { "value":1, "min":0, "max":1}
       },
       "weapon":
       {

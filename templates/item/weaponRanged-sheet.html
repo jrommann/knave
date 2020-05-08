@@ -6,23 +6,27 @@
             <div class="grid grid-2col">     
               <div class="resource">
                 <label class="resource-label">Damage</label>
-                  <input type="text" name="data.damgeDice" value="{{data.damageDice}}" data-dtype="String"/>
+                  <input type="text" name="data.damageDice" value="{{data.damageDice}}" data-dtype="String"/>
               </div>         
-              <div class="resource">
-                <label class="resource-label">Quality</label>
-                  <input type="text" name="data.quality.value" value="{{data.quality.value}}" data-dtype="Number"/>
-              </div>
-              <div class="resource">
-                <label class="resource-label">Current Ammo</label>
-                  <input type="text" name="data.ammo.value" value="{{data.ammo.value}}" data-dtype="String"/>
-              </div>                 
-              <div class="resource">
-                <label class="resource-label">Max Ammo</label>
-                  <input type="text" name="data.ammo.max" value="{{data.ammo.max}}" data-dtype="String"/>
-              </div>                 
               <div class="resource">
                 <label class="resource-label">Slots</label>
                   <input type="text" name="data.slots" value="{{data.slots}}" data-dtype="Number"/>
+              </div>
+              <div class="resource">
+                <div class="grid grid-3col">
+                  <label class="resource-label">Current</label><span></span><label class="resource-label">Max</label>
+                  <input type="text" name="data.ammo.value" value="{{data.ammo.value}}" data-dtype="Number"/>
+                  <label class="resource-label">Ammo</label>
+                  <input type="text" name="data.ammo.max" value="{{data.ammo.max}}" data-dtype="Number"/>
+                </div>   
+              </div> 
+              <div class="resource">
+                <div class="grid grid-3col">
+                  <label class="resource-label">Current</label><span></span><label class="resource-label">Max</label>
+                  <input type="text" name="data.quality.value" value="{{data.quality.value}}" data-dtype="Number"/>
+                  <label class="resource-label">Quality</label>
+                  <input type="text" name="data.quality.max" value="{{data.quality.max}}" data-dtype="Number"/>
+                </div>
               </div>
               <div class="resource">
                 <label class="resource-label">Coppers</label>

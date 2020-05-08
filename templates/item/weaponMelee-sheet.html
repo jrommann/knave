@@ -6,18 +6,22 @@
             <div class="grid grid-2col">    
               <div class="resource">
                 <label class="resource-label">Damage</label>
-                  <input type="text" name="data.damgeDice" value="{{data.damageDice}}" data-dtype="String"/>
+                <input type="text" name="data.damageDice" value="{{data.damageDice}}" data-dtype="String"/>
               </div>          
               <div class="resource">
                 <label class="resource-label">Slots</label>
                   <input type="text" name="data.slots" value="{{data.slots}}" data-dtype="Number"/>
-              </div>
+              </div>              
               <div class="resource">
-                <label class="resource-label">Quality</label>
+                <div class="grid grid-3col">
+                  <label class="resource-label">Current</label><span></span><label class="resource-label">Max</label>
                   <input type="text" name="data.quality.value" value="{{data.quality.value}}" data-dtype="Number"/>
+                  <label class="resource-label">Quality</label>
+                  <input type="text" name="data.quality.max" value="{{data.quality.max}}" data-dtype="Number"/>
+                </div>
               </div>
               <div class="resource">
-                <label class="resource-label">Coppers</label>
+                  <br><label class="resource-label">Coppers</label>
                   <input type="text" name="data.coppers" value="{{data.coppers}}" data-dtype="Number"/>
               </div>
             </div>
