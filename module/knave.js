@@ -49,4 +49,12 @@ Hooks.once('init', async function() {
   {
       return (item.type === 'weaponMelee' || item.type === 'weaponRanged');
   });
+
+  Handlebars.registerHelper('inventorySlots', function(inventorySlots)
+  {
+      if(inventorySlots.used >= inventorySlots.value)
+        return new Handlebars.SafeString('<span class="knave-encumbered">' + inventorySlots.used + "/" + inventorySlots.value + "</span>");
+      else
+        return new Handlebars.SafeString(inventorySlots.used + "/" + inventorySlots.value);
+  });
 });

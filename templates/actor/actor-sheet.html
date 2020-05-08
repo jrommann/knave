@@ -72,7 +72,7 @@
       <div class="items" data-group="primary" data-tab="items">
           <ol class="items-list">
               <li class="item flexrow item-header">
-                <div class="item-name">Slots {{data.inventorySlots.used}}/{{data.inventorySlots.value}}</div>
+                <div class="item-name">Slots {{inventorySlots data.inventorySlots}}</div>
                 <div class="item-name">Name</div>
                 <div class="item-controls">
                   <a class="item-control item-create" title="Create item" data-type="item"><i class="fas fa-plus"></i> Add item</a>
@@ -82,8 +82,8 @@
               <li class="item flexrow" data-item-id="{{item._id}}">
                   <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>                  
                   {{#if (isWeapon item)}}
-                  <div class="item-image item-roll"><img src="systems/knave/module/icons/d20.svg" title="roll" width="24" height="24"/></div>
-                  <div class="item-image item-roll"><img src="systems/knave/module/icons/crossed-sabres.svg" title="damage" width="24" height="24"/></div>
+                  <div class="item-image item-roll" title="attack"><img src="systems/knave/module/icons/d20.svg" title="attack" width="24" height="24"/></div>
+                  <div class="item-image item-roll" title="damage"><img src="systems/knave/module/icons/crossed-sabres.svg" title="damage" width="24" height="24"/></div>
                   {{/if}}
                   <h4 class="item-name">{{item.name}}</h4>
                   <div class="item-controls">

@@ -57,6 +57,14 @@ export class KnaveActorSheet extends ActorSheet {
       this.actor.deleteOwnedItem(li.data("itemId"));
       li.slideUp(200, () => this.render(false));
     });
+
+    //inventory weapon rolls
+    html.find('.item-roll').click(ev => 
+    {
+      const li = $(ev.currentTarget).parents(".item");
+      const item = this.actor.getOwnedItem(li.data("itemId"));  
+      this._onItemRoll(item, ev.currentTarget);
+    });
   }
 
   /* -------------------------------------------- */
@@ -107,7 +115,6 @@ export class KnaveActorSheet extends ActorSheet {
     r.roll();
    
     let messageHeader = "<b>" + name + "</b>";
-
     if(r.dice[0].total === 1)
       messageHeader += ' - <span class="knave-ability-crit knave-ability-critFailure">CRITICAL FAILURE!</span>';
     else if(r.dice[0].total === 20)
@@ -148,5 +155,37 @@ export class KnaveActorSheet extends ActorSheet {
         isRollVisible: true
     };
     r.toMessage(chatData);
+  }
+
+  _onItemRoll(item, eventTarget)
+  {
+    if(eventTarget.title === "attack")
+    {
+      if(item.type === "weaponMelee")
+      {
+        this._onAbility_Clicked("str");
+      }
+      else if(item.type === "weaponRanged")
+      {
+        this._onAbility_Clicked("wis");
+      }
+    }
+    else if(eventTarget.title === "damage")
+    {      
+      let r = new Roll(item.data.data.damageDice);    
+      r.roll();
+      
+      let messageHeader = "<b>" + item.name + "</b>";   
+      messageHeader += "<br>"
+      let chatData = 
+      {
+          user: game.user._id,
+          speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+          flavor: messageHeader,
+          _roll: r,
+          isRollVisible: true
+      };
+      r.toMessage(chatData);
+    }
   }
 }

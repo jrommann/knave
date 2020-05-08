@@ -274,3 +274,8 @@
   min-height: 200px;
   resize: none;
 }
+
+.knave-encumbered
+{
+  color: red;
+}
