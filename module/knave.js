@@ -44,4 +44,9 @@ Hooks.once('init', async function() {
   Handlebars.registerHelper('toLowerCase', function(str) {
     return str.toLowerCase();
   });
+
+  Handlebars.registerHelper('isWeapon', function(item)
+  {
+      return (item.type === 'weaponMelee' || item.type === 'weaponRanged');
+  });
 });
