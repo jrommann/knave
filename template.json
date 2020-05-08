@@ -54,7 +54,13 @@
             "max":10
           }
         },
-        "movement":""
+        "movement":"",
+        "morale":
+        {
+          "value":12,
+          "max":12,
+          "min":0
+        }
       }
     },
     "character":

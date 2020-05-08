@@ -242,6 +242,7 @@
 }
 
 .knave-ability-button {width: 60px; height: 28px;}
+.knave-morale-button {width: 70px; height: 28px;}
 
 .knave-ability-crit
 {
@@ -257,3 +258,16 @@
 {
   color: red;
 }
+
+.editor-content:empty:before 
+{
+  content: "This text is editable";
+}
+
+.knave-character-description
+{  
+  min-height: 200px;
+  resize: none;
+}
+
+

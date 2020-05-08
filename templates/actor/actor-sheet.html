@@ -34,7 +34,13 @@
         </div>
 
         <div class="flex-group-center">
-          <span class="resource-label">MOVEMENT</span><input type="text" name="data.movement" value="{{data.movement}}" data-dtype="String"/>
+          <span class="resource-label">MOVEMENT</span>
+          <input type="text" name="data.movement" value="{{data.movement}}" data-dtype="String"/> 
+          <div class="abilities grid grid-3col">
+            <span class="resource-label">MORALE</span>
+            <input type="text" name="data.morale.value" value="{{data.morale.value}}" data-dtype="Number"/>      
+            <button class="knave-morale-button resource-label">Check</button>    
+          </div>
         </div>
       </div>    
    
@@ -42,7 +48,7 @@
           <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="200" width="200"/>
           <div class="header-fields">
               <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>  
-              <div class="abilities grid grid-2col">
+              <div class="abilities grid grid-col">
                 <div class="flex-group-center">
                 <label for="data.level.value" class="resource-label">LEVEL</label>
                 <input type="text" name="data.level.value" value="{{data.level.value}}" data-dtype="Number"/>
@@ -54,8 +60,8 @@
               </div>
                           
               <label for="data.biography.value" class="resource-label">Description</label>  
-              <textarea name="data.biography" rows="5" title="Description" data-dtype="String">
-                {{data.biography}}
+              <textarea class="knave-character-description" name="data.biography" rows="5" title="Description" data-dtype="String">
+                {{#if data.biography}}{{data.biography}}{{/if}}
               </textarea>
           </div>
       </div>
