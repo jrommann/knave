@@ -100,7 +100,8 @@
       },
       "weapon":
       {
-        "damageDice":"1d3"
+        "damageDice":"1d3",
+        "hands": 1
       }
     },
     "item":

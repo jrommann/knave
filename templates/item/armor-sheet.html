@@ -9,8 +9,12 @@
                   <input type="text" name="data.defense" value="{{data.defense}}" data-dtype="Number"/>
               </div>
               <div class="resource">
-                <label class="resource-label">Quality</label>
+                <div class="grid grid-3col">
+                  <label class="resource-label">Current</label><span></span><label class="resource-label">Max</label>
                   <input type="text" name="data.quality.value" value="{{data.quality.value}}" data-dtype="Number"/>
+                  <label class="resource-label">Quality</label>
+                  <input type="text" name="data.quality.max" value="{{data.quality.max}}" data-dtype="Number"/>
+                </div>
               </div>
               <div class="resource">
                 <label class="resource-label">Slots</label>
