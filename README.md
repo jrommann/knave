@@ -9,8 +9,8 @@ KNAVE is a rules toolkit created by Ben Milton for running old school fantasy RP
 - **Copper standard.** Knave assumes that the common unit of currency is the copper penny. All item prices use this denomination and approximate actual medieval prices.
 
 Available at:
-DriveThruRPG - <https://www.drivethrurpg.com/product/250888/Knave>
-Questing Beast - <https://questingbeast.itch.io/>
+DriveThruRPG - <https://www.drivethrurpg.com/product/250888/Knave>  
+Questing Beast - <https://questingbeast.itch.io/>  
 
 Creative Commons Attribution 4.0 International License: You
 are free to share and adapt this material for any purpose,
