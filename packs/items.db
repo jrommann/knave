@@ -5,7 +5,6 @@
 {"name":"Padlock and Key","permission":{"default":0,"tPNaolfxxS2wCxdd":3},"type":"item","data":{"name":"","description":"","quantity":1,"slots":1,"coppers":20},"flags":{},"img":"icons/svg/mystery-man.svg","_id":"6hJuaH4cL6jmX4Yj"}
 {"name":"Bellows","permission":{"default":0,"tPNaolfxxS2wCxdd":3},"type":"item","data":{"name":"","description":"","quantity":1,"slots":1,"coppers":10},"flags":{},"img":"icons/svg/mystery-man.svg","_id":"6sJP5BoFIk2oTe6t"}
 {"name":"Fishing Rod/Tackle","permission":{"default":0,"tPNaolfxxS2wCxdd":3},"type":"item","data":{"name":"","description":"","quantity":1,"slots":1,"coppers":10},"flags":{},"img":"icons/svg/mystery-man.svg","_id":"7HQTq2OhRSNqXrKW"}
-{"name":"Winter","permission":{"default":0,"tPNaolfxxS2wCxdd":3},"type":"item","data":{"name":"","description":"","quantity":1,"slots":1,"coppers":100},"flags":{},"img":"icons/svg/mystery-man.svg","_id":"7hCX52fOgotQF6uD"}
 {"name":"Glue (bottle)","permission":{"default":0,"tPNaolfxxS2wCxdd":3},"type":"item","data":{"name":"","description":"","quantity":1,"slots":1,"coppers":1},"flags":{},"img":"icons/svg/mystery-man.svg","_id":"8clyKUKAGqeOkt91"}
 {"name":"Horn","permission":{"default":0,"tPNaolfxxS2wCxdd":3},"type":"item","data":{"name":"","description":"","quantity":1,"slots":1,"coppers":10},"flags":{},"img":"icons/svg/mystery-man.svg","_id":"8uzzNMnieZFhE1u4"}
 {"name":"Waterskin","permission":{"default":0,"tPNaolfxxS2wCxdd":3},"type":"item","data":{"name":"","description":"","quantity":1,"slots":1,"coppers":5},"flags":{},"img":"icons/svg/mystery-man.svg","_id":"8yuk3RV9TC6oCEVt"}
@@ -20,13 +19,10 @@
 {"name":"Ladder (10ft)","permission":{"default":0,"tPNaolfxxS2wCxdd":3},"type":"item","data":{"name":"","description":"","quantity":1,"slots":1,"coppers":10},"flags":{},"img":"icons/svg/mystery-man.svg","_id":"IpiKFfUhbWosQQ5a"}
 {"name":"Sack","permission":{"default":0,"tPNaolfxxS2wCxdd":3},"type":"item","data":{"name":"","description":"","quantity":1,"slots":1,"coppers":1},"flags":{},"img":"icons/svg/mystery-man.svg","_id":"IpqPNeqFLUb3Hwz5"}
 {"name":"Twine (300ft)","permission":{"default":0,"tPNaolfxxS2wCxdd":3},"type":"item","data":{"name":"","description":"","quantity":1,"slots":1,"coppers":5},"flags":{},"img":"icons/svg/mystery-man.svg","_id":"J6xlO2t4cqYpw8Rk"}
-{"name":"Furs","permission":{"default":0,"tPNaolfxxS2wCxdd":3},"type":"item","data":{"name":"","description":"","quantity":1,"slots":1,"coppers":5000},"flags":{},"img":"icons/svg/mystery-man.svg","_id":"JmGW8kUUzU7LKwPj"}
-{"name":"Noble","permission":{"default":0,"tPNaolfxxS2wCxdd":3},"type":"item","data":{"name":"","description":"","quantity":1,"slots":1,"coppers":3000},"flags":{},"img":"icons/svg/mystery-man.svg","_id":"Ju2L4MMpYiU1UV6z"}
 {"name":"Shovel","permission":{"default":0,"tPNaolfxxS2wCxdd":3},"type":"item","data":{"name":"","description":"","quantity":1,"slots":1,"coppers":10},"flags":{},"img":"icons/svg/mystery-man.svg","_id":"KO2Dzosrhp6ovMA7"}
 {"name":"Air Bladder","permission":{"default":0,"tPNaolfxxS2wCxdd":3},"type":"item","data":{"name":"","description":"","quantity":1,"slots":1,"coppers":5},"flags":{},"img":"icons/svg/mystery-man.svg","_id":"KTDwJUNNlVx0R0Wu"}
 {"name":"Incense (packet)","permission":{"default":0,"tPNaolfxxS2wCxdd":3},"type":"item","data":{"name":"","description":"","quantity":1,"slots":1,"coppers":10},"flags":{},"img":"icons/svg/mystery-man.svg","_id":"MlL7l18yg7AV4Xqo"}
 {"name":"Iron Tongs","permission":{"default":0,"tPNaolfxxS2wCxdd":3},"type":"item","data":{"name":"","description":"","quantity":1,"slots":1,"coppers":10},"flags":{},"img":"icons/svg/mystery-man.svg","_id":"NdzngBkiZvLHNHIS"}
-{"name":"Poor","permission":{"default":0,"tPNaolfxxS2wCxdd":3},"type":"item","data":{"name":"","description":"","quantity":1,"slots":1,"coppers":10},"flags":{},"img":"icons/svg/mystery-man.svg","_id":"OU0nvX8yAI6d9ONq"}
 {"name":"Set of Loaded Dice","permission":{"default":0,"tPNaolfxxS2wCxdd":3},"type":"item","data":{"name":"","description":"","quantity":1,"slots":1,"coppers":5},"flags":{},"img":"icons/svg/mystery-man.svg","_id":"OuEughusPt4exc2q"}
 {"name":"Spike (wood)","permission":{"default":0,"tPNaolfxxS2wCxdd":3},"type":"item","data":{"name":"","description":"","quantity":1,"slots":1,"coppers":1},"flags":{},"img":"icons/svg/mystery-man.svg","_id":"P2PvsKbwfBbwWks3"}
 {"name":"Oilskin Bag","permission":{"default":0,"tPNaolfxxS2wCxdd":3},"type":"item","data":{"name":"","description":"","quantity":1,"slots":1,"coppers":5},"flags":{},"img":"icons/svg/mystery-man.svg","_id":"Q89fgE3QF5xMX1XQ"}
@@ -44,7 +40,6 @@
 {"name":"Large Sponge","permission":{"default":0,"tPNaolfxxS2wCxdd":3},"type":"item","data":{"name":"","description":"","quantity":1,"slots":1,"coppers":5},"flags":{},"img":"icons/svg/mystery-man.svg","_id":"a2QQNc6SvnfQvEsY"}
 {"name":"Black Grease","permission":{"default":0,"tPNaolfxxS2wCxdd":3},"type":"item","data":{"name":"","description":"","quantity":1,"slots":1,"coppers":1},"flags":{},"img":"icons/svg/mystery-man.svg","_id":"b4Pwda8U0mFxyS0X"}
 {"name":"Caltrops (bag)","permission":{"default":0,"tPNaolfxxS2wCxdd":3},"type":"item","data":{"name":"","description":"","quantity":1,"slots":1,"coppers":10},"flags":{},"img":"icons/svg/mystery-man.svg","_id":"b6KoYojD36bF0e3Z"}
-{"name":"Quiver (capacity 20)","permission":{"default":0,"tPNaolfxxS2wCxdd":3},"type":"item","data":{"name":"","description":"","quantity":1,"slots":1,"coppers":10},"flags":{},"img":"icons/svg/mystery-man.svg","_id":"c1QKaXBTCx6RHXCf"}
 {"name":"Book (Blank)","permission":{"default":0,"tPNaolfxxS2wCxdd":3},"type":"item","data":{"name":"","description":"","quantity":1,"slots":1,"coppers":300},"flags":{},"img":"icons/svg/mystery-man.svg","_id":"cIItiXIUp4jfaaEv"}
 {"name":"Lockpicks","permission":{"default":0,"tPNaolfxxS2wCxdd":3},"type":"item","data":{"name":"","description":"","quantity":1,"slots":1,"coppers":100},"flags":{},"img":"icons/svg/mystery-man.svg","_id":"csBv3HetqvRcSQjy"}
 {"name":"Glass Marbles (bag)","permission":{"default":0,"tPNaolfxxS2wCxdd":3},"type":"item","data":{"name":"","description":"","quantity":1,"slots":1,"coppers":5},"flags":{},"img":"icons/svg/mystery-man.svg","_id":"eFm8ICo3Yi07QAy1"}
@@ -52,11 +47,9 @@
 {"name":"Cookpots","permission":{"default":0,"tPNaolfxxS2wCxdd":3},"type":"item","data":{"name":"","description":"","quantity":1,"slots":1,"coppers":10},"flags":{},"img":"icons/svg/mystery-man.svg","_id":"eav0LKsjufO5W2vz"}
 {"name":"Spiked Boots","permission":{"default":0,"tPNaolfxxS2wCxdd":3},"type":"item","data":{"name":"","description":"","quantity":1,"slots":1,"coppers":5},"flags":{},"img":"icons/svg/mystery-man.svg","_id":"emYMiih8BoL0nY9V"}
 {"name":"Holy Water","permission":{"default":0,"tPNaolfxxS2wCxdd":3},"type":"item","data":{"name":"","description":"","quantity":1,"slots":1,"coppers":25},"flags":{},"img":"icons/svg/mystery-man.svg","_id":"f7yiUOtyidxai1gi"}
-{"name":"Standard","permission":{"default":0,"tPNaolfxxS2wCxdd":3},"type":"item","data":{"name":"","description":"","quantity":1,"slots":1,"coppers":50},"flags":{},"img":"icons/svg/mystery-man.svg","_id":"fBtBOzmSg36Icib5"}
 {"name":"Chisel","permission":{"default":0,"tPNaolfxxS2wCxdd":3},"type":"item","data":{"name":"","description":"","quantity":1,"slots":1,"coppers":5},"flags":{},"img":"icons/svg/mystery-man.svg","_id":"iVEjmTfA5YQk1Oco"}
 {"name":"Manacles","permission":{"default":0,"tPNaolfxxS2wCxdd":3},"type":"item","data":{"name":"","description":"","quantity":1,"slots":1,"coppers":10},"flags":{},"img":"icons/svg/mystery-man.svg","_id":"k3Bt2wLH9XO1fBwI"}
 {"name":"Crowbar","permission":{"default":0,"tPNaolfxxS2wCxdd":3},"type":"item","data":{"name":"","description":"","quantity":1,"slots":1,"coppers":10},"flags":{},"img":"icons/svg/mystery-man.svg","_id":"mHnBuivYR5rGDIvo"}
-{"name":"Arrows (20)","permission":{"default":0,"tPNaolfxxS2wCxdd":3},"type":"item","data":{"name":"","description":"","quantity":1,"slots":1,"coppers":5},"flags":{},"img":"icons/svg/mystery-man.svg","_id":"n7Y8kVivx861tFd1"}
 {"name":"Ten (3 man)","permission":{"default":0,"tPNaolfxxS2wCxdd":3},"type":"item","data":{"name":"","description":"","quantity":1,"slots":1,"coppers":100},"flags":{},"img":"icons/svg/mystery-man.svg","_id":"nEwbVcFRa7x6iHam"}
 {"name":"Quill and Ink","permission":{"default":0,"tPNaolfxxS2wCxdd":3},"type":"item","data":{"name":"","description":"","quantity":1,"slots":1,"coppers":1},"flags":{},"img":"icons/svg/mystery-man.svg","_id":"qr8zYYz8FZuihfXj"}
 {"name":"Tar (pot)","permission":{"default":0,"tPNaolfxxS2wCxdd":3},"type":"item","data":{"name":"","description":"","quantity":1,"slots":1,"coppers":10},"flags":{},"img":"icons/svg/mystery-man.svg","_id":"quP4YFU8mAFf0vex"}
@@ -67,10 +60,3 @@
 {"name":"Lens","permission":{"default":0,"tPNaolfxxS2wCxdd":3},"type":"item","data":{"name":"","description":"","quantity":1,"slots":1,"coppers":100},"flags":{},"img":"icons/svg/mystery-man.svg","_id":"yQi325WUDXIiZFNc"}
 {"name":"Spike (iron)","permission":{"default":0,"tPNaolfxxS2wCxdd":3},"type":"item","data":{"name":"","description":"","quantity":1,"slots":1,"coppers":5},"flags":{},"img":"icons/svg/mystery-man.svg","_id":"zJztG6We8M0SNOin"}
 {"name":"Perfume","permission":{"default":0,"tPNaolfxxS2wCxdd":3},"type":"item","data":{"name":"","description":"","quantity":1,"slots":1,"coppers":50},"flags":{},"img":"icons/svg/mystery-man.svg","_id":"zKaQTJGINCXaAvn4"}
-{"$$deleted":true,"_id":"OU0nvX8yAI6d9ONq"}
-{"$$deleted":true,"_id":"fBtBOzmSg36Icib5"}
-{"$$deleted":true,"_id":"Ju2L4MMpYiU1UV6z"}
-{"$$deleted":true,"_id":"JmGW8kUUzU7LKwPj"}
-{"$$deleted":true,"_id":"7hCX52fOgotQF6uD"}
-{"$$deleted":true,"_id":"n7Y8kVivx861tFd1"}
-{"$$deleted":true,"_id":"c1QKaXBTCx6RHXCf"}
