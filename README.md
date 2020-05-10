@@ -8,7 +8,7 @@ KNAVE is a rules toolkit created by Ben Milton for running old school fantasy RP
 - **Optional player-facing rolls.** Knave easily accommodates referees who want the players to do all the rolling. Switching between the traditional shared-rolling model and players-only rolling can be done effortlessly on the fly.
 - **Copper standard.** Knave assumes that the common unit of currency is the copper penny. All item prices use this denomination and approximate actual medieval prices.
 
-Available at:
+Available at:  
 DriveThruRPG - <https://www.drivethrurpg.com/product/250888/Knave>  
 Questing Beast - <https://questingbeast.itch.io/>  
 
