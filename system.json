@@ -108,6 +108,6 @@
   "primaryTokenAttribute": "health",
   "url": "https://github.com/jrommann/knave",
   "manifest": "https://raw.githubusercontent.com/jrommann/knave/master/system.json",
-  "download": "",
+  "download": "https://github.com/jrommann/knave/archive/1.0.0.zip",
   "license": "LICENSE.txt"
 }
