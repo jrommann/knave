@@ -1,4 +1,4 @@
-# Knave
+# KNAVE v1.0.0
 KNAVE is a rules toolkit created by Ben Milton for running old school fantasy RPGs without classes. Adding, subtracting and modifying rules is both expected and encouraged. Knave’s features include:
 
 - **High compatibility with OSR games.** If you have a library of OSR bestiaries, adventure and spell books, little or no conversion is needed to use them with Knave.
