@@ -107,7 +107,7 @@
   "gridUnits": "ft",
   "primaryTokenAttribute": "health",
   "url": "https://github.com/jrommann/knave",
-  "manifest": "https://github.com/jrommann/knave/system.json",
+  "manifest": "https://github.com/jrommann/knave/blob/master/system.json",
   "download": "",
   "license": "LICENSE.txt"
 }
