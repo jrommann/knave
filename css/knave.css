@@ -279,3 +279,16 @@
 {
   color: red;
 }
+
+.knave .resource-label-small
+{
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: .8em;
+  vertical-align: middle;
+}
+
+.knave .align-left
+{
+  text-align: left;
+}

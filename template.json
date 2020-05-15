@@ -78,6 +78,20 @@
         "used":0,
         "value":0,
         "max":20
+      },
+      "traits":
+      {
+        "physique":"",
+        "face":"",
+        "skin":"",
+        "hair":"",
+        "clothing":"",
+        "virtue":"",
+        "vice":"",
+        "speech":"",
+        "background":"",
+        "misfortune":"",
+        "alignment":""
       }
     }
   },

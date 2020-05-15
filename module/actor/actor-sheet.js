@@ -10,8 +10,8 @@ export class KnaveActorSheet extends ActorSheet {
       classes: ["knave", "sheet", "actor"],
       template: "systems/knave/templates/actor/actor-sheet.html",
       width: 1000,
-      height: 600,
-      /*tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]*/
+      height: 620,
+      tabs: [{ navSelector: ".decstription-tabs", contentSelector: ".decstription-tabs-content", initial: "description" }]
     });
   }
 
