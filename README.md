@@ -1,4 +1,4 @@
-# KNAVE v1.0.0
+# KNAVE v1.1.0
 KNAVE is a rules toolkit created by Ben Milton for running old school fantasy RPGs without classes. Adding, subtracting and modifying rules is both expected and encouraged. Knave’s features include:
 
 - **High compatibility with OSR games.** If you have a library of OSR bestiaries, adventure and spell books, little or no conversion is needed to use them with Knave.
@@ -15,3 +15,14 @@ Questing Beast - <https://questingbeast.itch.io/>
 Creative Commons Attribution 4.0 International License: You
 are free to share and adapt this material for any purpose,
 including commercially, as long as you give attribution.
+
+#Changelog
+**1.1.0**
+- Added description and trait tabs
+- Added input boxes for the character traits
+- Fixed blank lines/text being added to character description text area
+- Added weapon quality reduction on critical miss
+- Added ranged weapon ammo reduction on attack roll
+- Ranged weapons can't attack with out ammo
+- Added broken weapon message when quality is  0
+- Broken weapons can't be rolled with
