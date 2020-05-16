@@ -2,7 +2,8 @@
  * Extend the basic ActorSheet with some very simple modifications
  * @extends {ActorSheet}
  */
-export class KnaveActorSheet extends ActorSheet {
+export class KnaveActorSheet extends ActorSheet 
+{
 
   /** @override */
   static get defaultOptions() {
@@ -114,22 +115,21 @@ export class KnaveActorSheet extends ActorSheet {
     let r = new Roll(formula);    
     r.roll();
    
+    let returnCode = 0;
     let messageHeader = "<b>" + name + "</b>";
     if(r.dice[0].total === 1)
-      messageHeader += ' - <span class="knave-ability-crit knave-ability-critFailure">CRITICAL FAILURE!</span>';
-    else if(r.dice[0].total === 20)
-      messageHeader += ' - <span class="knave-ability-crit knave-ability-critSuccess">CRITICAL SUCCESS!</span>';
-
-    messageHeader += "<br>"
-    let chatData = 
     {
-        user: game.user._id,
-        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-        flavor: messageHeader,
-        _roll: r,
-        isRollVisible: true
-    };
-    r.toMessage(chatData);
+      messageHeader += ' - <span class="knave-ability-crit knave-ability-critFailure">CRITICAL FAILURE!</span>';
+      returnCode = -1;
+    }
+    else if(r.dice[0].total === 20)
+    {
+      messageHeader += ' - <span class="knave-ability-crit knave-ability-critSuccess">CRITICAL SUCCESS!</span>';
+      returnCode = 1;
+    }
+    
+    r.toMessage({speaker: ChatMessage.getSpeaker({ actor: this.actor }), flavor: messageHeader});
+    return returnCode;
   }
 
   _onMoraleCheck(event)
@@ -144,48 +144,96 @@ export class KnaveActorSheet extends ActorSheet {
       messageHeader += '<span class="knave-ability-crit knave-ability-critFailure">Is fleeing</span>';
     else
       messageHeader += '<span class="knave-ability-crit knave-ability-critSuccess">Is staying</span>';
-
-    messageHeader += "<br>"
-    let chatData = 
-    {
-        user: game.user._id,
-        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-        flavor: messageHeader,
-        _roll: r,
-        isRollVisible: true
-    };
-    r.toMessage(chatData);
+    r.toMessage({ flavor: messageHeader});
   }
 
   _onItemRoll(item, eventTarget)
   {
     if(eventTarget.title === "attack")
     {
-      if(item.type === "weaponMelee")
+      if(item.type === "weaponMelee" && !this._itemIsBroken(item))
       {
-        this._onAbility_Clicked("str");
+        if(this._onAbility_Clicked("str") === -1)
+          this._weaponCriticalFailure(item);        
       }
-      else if(item.type === "weaponRanged")
-      {
-        this._onAbility_Clicked("wis");
-      }
+      else if(item.type === "weaponRanged" && !this._itemIsBroken(item))
+          this._rangedAttackRoll(item);
     }
-    else if(eventTarget.title === "damage")
+    else if(eventTarget.title === "damage" && !this._itemIsBroken(item))
     {      
       let r = new Roll(item.data.data.damageDice);    
-      r.roll();
-      
+      r.roll();            
       let messageHeader = "<b>" + item.name + "</b>";   
-      messageHeader += "<br>"
-      let chatData = 
-      {
+      r.toMessage({ speaker: ChatMessage.getSpeaker({ actor: this.actor }), flavor: messageHeader});
+    }
+  }
+
+  _weaponCriticalFailure(item)
+  {
+      item.data.data.quality.value -= 1;
+      if(item.data.data.quality.value <= item.data.data.quality.min)
+      {        
+        let content = '<span class="knave-ability-crit knave-ability-critFailure"><b>' + item.name + "</b> broke!</span>"; 
+        ChatMessage.create({
           user: game.user._id,
           speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-          flavor: messageHeader,
-          _roll: r,
-          isRollVisible: true
-      };
-      r.toMessage(chatData);
+          content: content
+        });
+      }
+      else
+      {
+        let content = '<span><b>' + item.name + "</b> quality reduced to " + item.data.data.quality.value + "/" + item.data.data.quality.max; + "</span>";
+        ChatMessage.create({
+          user: game.user._id,
+          speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+          content: content
+        });
+      }
+  }
+
+  _itemIsBroken(item)
+  {
+    if(item.data.data.quality.value <= 0)
+    {
+      let content = '<span class="knave-ability-crit knave-ability-critFailure"><b>' + item.name + "</b> is broken!</span>"; 
+        ChatMessage.create({
+          user: game.user._id,
+          speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+          content: content
+        });
+      return true;
     }
+
+    return false;
+  }
+
+  _rangedAttackRoll(item)
+  {
+    if(item.data.data.ammo.value > 0)
+    {
+      if(this._onAbility_Clicked("wis") === -1)
+        this._weaponCriticalFailure(item);
+
+      item.data.data.ammo.value -= 1;   
+      if(item.data.data.ammo.value <= 0)
+        this._createNoAmmoMsg(item, true);
+    }
+    else
+      this._createNoAmmoMsg(item, false);
+  }
+
+  _createNoAmmoMsg(item, outOfAmmo)
+  {
+      let content = "<b>" + item.name + "</b> ";   
+      if(outOfAmmo === true)
+      { content += "is out of ammo!"; }
+      else
+      { content += "has no ammo!"; }
+      
+        ChatMessage.create({
+          user: game.user._id,
+          speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+          content: content
+        });
   }
 }
