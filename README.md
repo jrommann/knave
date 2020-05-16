@@ -16,7 +16,7 @@ Creative Commons Attribution 4.0 International License: You
 are free to share and adapt this material for any purpose,
 including commercially, as long as you give attribution.
 
-#Changelog
+# Changelog
 **1.1.0**
 - Added description and trait tabs
 - Added input boxes for the character traits
