@@ -57,4 +57,12 @@ Hooks.once('init', async function() {
       else
         return new Handlebars.SafeString(inventorySlots.used + "/" + inventorySlots.value);
   });
+
+  Handlebars.registerHelper('isItemBroken', function(item)
+  {
+    if(item.data.quality)
+      return item.data.quality.value <= 0;
+    else
+      return false;
+  });
 });

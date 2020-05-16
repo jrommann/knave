@@ -139,8 +139,9 @@
                       {{#if (isWeapon item)}}
                       <div class="item-image item-roll" title="attack"><img src="systems/knave/module/icons/d20.svg" title="attack" width="24" height="24"/></div>
                       <div class="item-image item-roll" title="damage"><img src="systems/knave/module/icons/crossed-sabres.svg" title="damage" width="24" height="24"/></div>
-                      {{/if}}
-                      <h4 class="item-name">{{item.name}}</h4>
+                      {{/if}}                      
+                      <h4 class="item-name {{#if (isItemBroken item)}}knave-encumbered{{/if}}">{{item.name}}</h4>
+                    </span> 
                       <div class="item-controls">
                           <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
                           <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
