@@ -171,6 +171,8 @@ export class KnaveActorSheet extends ActorSheet
   _weaponCriticalFailure(item)
   {
       item.data.data.quality.value -= 1;
+      item.sheet.render(false, item.data.data.quality);
+
       if(item.data.data.quality.value <= item.data.data.quality.min)
       {        
         let content = '<span class="knave-ability-crit knave-ability-critFailure"><b>' + item.name + "</b> broke!</span>"; 
@@ -215,6 +217,7 @@ export class KnaveActorSheet extends ActorSheet
         this._weaponCriticalFailure(item);
 
       item.data.data.ammo.value -= 1;   
+      item.sheet.render(false, item.data.data.ammo);
       if(item.data.data.ammo.value <= 0)
         this._createNoAmmoMsg(item, true);
     }
