@@ -118,18 +118,12 @@ export class KnaveActorSheet extends ActorSheet
     let returnCode = 0;
     let messageHeader = "<b>" + name + "</b>";
     if(r.dice[0].total === 1)
-    {
-      messageHeader += ' - <span class="knave-ability-crit knave-ability-critFailure">CRITICAL FAILURE!</span>';
-      returnCode = -1;
-    }
+      messageHeader += ' - <span class="knave-ability-crit knave-ability-critFailure">CRITICAL FAILURE!</span>';  
     else if(r.dice[0].total === 20)
-    {
       messageHeader += ' - <span class="knave-ability-crit knave-ability-critSuccess">CRITICAL SUCCESS!</span>';
-      returnCode = 1;
-    }
     
     r.toMessage({speaker: ChatMessage.getSpeaker({ actor: this.actor }), flavor: messageHeader});
-    return returnCode;
+    return r;
   }
 
   _onMoraleCheck(event)
@@ -153,8 +147,10 @@ export class KnaveActorSheet extends ActorSheet
     {
       if(item.type === "weaponMelee" && !this._itemIsBroken(item))
       {
-        if(this._onAbility_Clicked("str") === -1)
-          this._weaponCriticalFailure(item);        
+        if(this._onAbility_Clicked("str").dice[0].total === 1)
+          this._weaponCriticalFailure(item);    
+          
+        this._checkToHitTargets(roll);
       }
       else if(item.type === "weaponRanged" && !this._itemIsBroken(item))
           this._rangedAttackRoll(item);
@@ -165,7 +161,18 @@ export class KnaveActorSheet extends ActorSheet
       r.roll();            
       let messageHeader = "<b>" + item.name + "</b>";   
       r.toMessage({ speaker: ChatMessage.getSpeaker({ actor: this.actor }), flavor: messageHeader});
+
+      this._hitTargets.forEach((target)=>
+      {
+        this._doDamage(target, r.total);
+      });      
     }
+  }
+
+  _doDamage(target, dmg)
+  {
+      target.data.data.health.value -= dmg;     
+      target.sheet.render(false, target.data.data.health.value);
   }
 
   _weaponCriticalFailure(item)
@@ -213,13 +220,16 @@ export class KnaveActorSheet extends ActorSheet
   {
     if(item.data.data.ammo.value > 0)
     {
-      if(this._onAbility_Clicked("wis") === -1)
+      const roll = this._onAbility_Clicked("wis");
+      if(roll.dice[0].total === 1)
         this._weaponCriticalFailure(item);
 
       item.data.data.ammo.value -= 1;   
       item.sheet.render(false, item.data.data.ammo);
       if(item.data.data.ammo.value <= 0)
         this._createNoAmmoMsg(item, true);
+
+      this._checkToHitTargets(roll);
     }
     else
       this._createNoAmmoMsg(item, false);
@@ -238,5 +248,34 @@ export class KnaveActorSheet extends ActorSheet
           speaker: ChatMessage.getSpeaker({ actor: this.actor }),
           content: content
         });
+  }
+
+  _hitTargets = new Set();
+  _checkToHitTargets(roll)
+  {
+    this._hitTargets.clear();
+    game.users.current.targets.forEach((x)=>
+    { 
+      if(roll.total > x.actor.data.data.armor.value)
+      {
+        this._createHitMsg(x.actor, false);
+        this._hitTargets.add(x.actor);
+      }
+      else
+        this._createHitMsg(x.actor, true);
+    });
+  }
+
+  _createHitMsg(targetActor, missed)
+  {
+    const hitMsg = this.actor.name + " <b>hit</b> " + targetActor.name;
+    const missMsg = this.actor.name + " <b>missed</b> " + targetActor.name;
+    
+    ChatMessage.create(
+    {
+      user: game.user._id,
+      speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+      content: (missed ? missMsg : hitMsg), 
+    });
   }
 }
