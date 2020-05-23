@@ -17,6 +17,13 @@ are free to share and adapt this material for any purpose,
 including commercially, as long as you give attribution.
 
 # Changelog
+**Upcoming 1.2.0**
+- Improved Clothing Compendium
+- Added missing label to Physique trait table
+- Broken item's name turns red
+- Item sheet updates if open and inventory roll buttons are used
+- Added support for hit/miss of selected targets for weapn rolls
+
 **1.1.0**
 - Added description and trait tabs
 - Added input boxes for the character traits
