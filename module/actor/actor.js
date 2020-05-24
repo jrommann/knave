@@ -29,6 +29,10 @@ export class KnaveActor extends Actor {
     //calculate armor bonus
     data.armor.bonus = Number(data.armor.value) - Number(10);
 
+    //clamp health
+    if(data.health.value > data.health.max)
+      data.health.value = data.health.max;
+
     //calculate max inventory slots and used slots
     data.inventorySlots.value = Number(data.abilities.con.value) + Number(10);
     let used = 0;
