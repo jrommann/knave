@@ -225,7 +225,7 @@ export class KnaveActorSheet extends ActorSheet
         this._weaponCriticalFailure(item);
 
       item.data.data.ammo.value -= 1;   
-      item.sheet.render(false, item.data.data.ammo);
+      item.update({"item.data.data.ammo.value": item.data.data.ammo.value});      
       if(item.data.data.ammo.value <= 0)
         this._createNoAmmoMsg(item, true);
 
