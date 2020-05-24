@@ -22,7 +22,12 @@ including commercially, as long as you give attribution.
 - Added missing label to Physique trait table
 - Broken item's name turns red
 - Item sheet updates if open and inventory roll buttons are used
-- Added support for hit/miss of selected targets for weapn rolls
+- **Added support for hit/miss of selected targets for weapons**
+- Fixed ammo count not saving when using attack button
+- Clamped health to max health
+- Clamped ammo between 0 and max
+- Fixed Quality not saving correctly
+- **Added support for damage of selected target for weapons**
 
 **1.1.0**
 - Added description and trait tabs

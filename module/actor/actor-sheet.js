@@ -5,9 +5,13 @@
 export class KnaveActorSheet extends ActorSheet 
 {
 
+  #_hitTargets = new Set();
+
   /** @override */
-  static get defaultOptions() {
-    return mergeObject(super.defaultOptions, {
+  static get defaultOptions() 
+  {
+    return mergeObject(super.defaultOptions, 
+    {
       classes: ["knave", "sheet", "actor"],
       template: "systems/knave/templates/actor/actor-sheet.html",
       width: 1000,
@@ -32,7 +36,8 @@ export class KnaveActorSheet extends ActorSheet
   }
 */
   /** @override */
-  activateListeners(html) {
+  activateListeners(html) 
+  {
     super.activateListeners(html);
 
     // Everything below here is only needed if the sheet is editable
@@ -75,7 +80,8 @@ export class KnaveActorSheet extends ActorSheet
    * @param {Event} event   The originating click event
    * @private
    */
-  _onItemCreate(event) {
+  _onItemCreate(event) 
+  {
     event.preventDefault();
     const header = event.currentTarget;
     // Get the type of item to create.
@@ -162,24 +168,17 @@ export class KnaveActorSheet extends ActorSheet
       let messageHeader = "<b>" + item.name + "</b>";   
       r.toMessage({ speaker: ChatMessage.getSpeaker({ actor: this.actor }), flavor: messageHeader});
 
-      this._hitTargets.forEach((target)=>
+      this.#_hitTargets.forEach((target)=>
       {
         this._doDamage(target, r.total);
       });      
     }
   }
 
-  _doDamage(target, dmg)
-  {
-      target.data.data.health.value -= dmg;     
-      target.sheet.render(false, target.data.data.health.value);
-  }
-
   _weaponCriticalFailure(item)
   {
       item.data.data.quality.value -= 1;
-      item.sheet.render(false, item.data.data.quality);
-
+      item.update({"data.quality.value":item.data.data.quality.value});
       if(item.data.data.quality.value <= item.data.data.quality.min)
       {        
         let content = '<span class="knave-ability-crit knave-ability-critFailure"><b>' + item.name + "</b> broke!</span>"; 
@@ -225,7 +224,7 @@ export class KnaveActorSheet extends ActorSheet
         this._weaponCriticalFailure(item);
 
       item.data.data.ammo.value -= 1;   
-      item.update({"item.data.data.ammo.value": item.data.data.ammo.value});      
+      item.update({"data.ammo.value": item.data.data.ammo.value});      
       if(item.data.data.ammo.value <= 0)
         this._createNoAmmoMsg(item, true);
 
@@ -250,16 +249,15 @@ export class KnaveActorSheet extends ActorSheet
         });
   }
 
-  _hitTargets = new Set();
   _checkToHitTargets(roll)
   {
-    this._hitTargets.clear();
+    this.#_hitTargets.clear();
     game.users.current.targets.forEach((x)=>
     { 
       if(roll.total > x.actor.data.data.armor.value)
       {
         this._createHitMsg(x.actor, false);
-        this._hitTargets.add(x.actor);
+        this.#_hitTargets.add(x);
       }
       else
         this._createHitMsg(x.actor, true);
@@ -268,8 +266,8 @@ export class KnaveActorSheet extends ActorSheet
 
   _createHitMsg(targetActor, missed)
   {
-    const hitMsg = this.actor.name + " <b>hit</b> " + targetActor.name;
-    const missMsg = this.actor.name + " <b>missed</b> " + targetActor.name;
+    const hitMsg = "<b>hit</b> " + targetActor.name;
+    const missMsg = "<b>missed</b> " + targetActor.name;
     
     ChatMessage.create(
     {
@@ -277,5 +275,34 @@ export class KnaveActorSheet extends ActorSheet
       speaker: ChatMessage.getSpeaker({ actor: this.actor }),
       content: (missed ? missMsg : hitMsg), 
     });
+  }
+
+  _doDamage(token, dmg)
+  {     
+    const currentHP = token.actor.data.data.health.value;
+    let newHP = currentHP - dmg;
+    if(currentHP > 0 && newHP <= 0)
+    {
+      newHP = 0;
+      const msg = "is unconscious";
+      ChatMessage.create(
+      {
+        user: game.user._id,
+        speaker: ChatMessage.getSpeaker({ actor: token.actor }),
+        content: msg, 
+      });
+    }
+    else if(currentHP === 0)
+    {
+      const msg = "is killed";
+      ChatMessage.create(
+      {
+        user: game.user._id,
+        speaker: ChatMessage.getSpeaker({ actor: token.actor }),
+        content: msg, 
+      });
+    }
+
+    token.actor.update({'data.health.value': newHP});       
   }
 }
