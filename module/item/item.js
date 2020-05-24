@@ -13,5 +13,13 @@ export class KnaveItem extends Item {
     const itemData = this.data;
     const actorData = this.actor ? this.actor.data : {};
     const data = itemData.data;
+
+    if(itemData.type === "weaponRanged")
+    {
+      if(data.ammo.value > data.ammo.max)
+        data.ammo.value = data.ammo.max;
+      else if(data.ammo.value < data.ammo.min)
+        data.ammo.value = data.ammo.min;
+    }
   }
 }
