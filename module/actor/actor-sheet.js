@@ -153,10 +153,11 @@ export class KnaveActorSheet extends ActorSheet
     {
       if(item.type === "weaponMelee" && !this._itemIsBroken(item))
       {
-        if(this._onAbility_Clicked("str").dice[0].total === 1)
+        const roll = this._onAbility_Clicked("str");
+        if(roll.dice[0].total === 1)
           this._weaponCriticalFailure(item);    
           
-        this._checkToHitTargets(roll);
+        this._checkToHitTargets(roll, item);
       }
       else if(item.type === "weaponRanged" && !this._itemIsBroken(item))
           this._rangedAttackRoll(item);
@@ -165,7 +166,7 @@ export class KnaveActorSheet extends ActorSheet
     {      
       let r = new Roll(item.data.data.damageDice);    
       r.roll();            
-      let messageHeader = "<b>" + item.name + "</b>";   
+      let messageHeader = "<b>" + item.name + "</b> damage";   
       r.toMessage({ speaker: ChatMessage.getSpeaker({ actor: this.actor }), flavor: messageHeader});
 
       this.#_hitTargets.forEach((target)=>
@@ -228,7 +229,7 @@ export class KnaveActorSheet extends ActorSheet
       if(item.data.data.ammo.value <= 0)
         this._createNoAmmoMsg(item, true);
 
-      this._checkToHitTargets(roll);
+      this._checkToHitTargets(roll, item);
     }
     else
       this._createNoAmmoMsg(item, false);
@@ -249,25 +250,25 @@ export class KnaveActorSheet extends ActorSheet
         });
   }
 
-  _checkToHitTargets(roll)
+  _checkToHitTargets(roll, item)
   {
     this.#_hitTargets.clear();
     game.users.current.targets.forEach((x)=>
     { 
       if(roll.total > x.actor.data.data.armor.value)
       {
-        this._createHitMsg(x.actor, false);
+        this._createHitMsg(x.actor, false, item);
         this.#_hitTargets.add(x);
       }
       else
-        this._createHitMsg(x.actor, true);
+        this._createHitMsg(x.actor, true, item);
     });
   }
 
-  _createHitMsg(targetActor, missed)
+  _createHitMsg(targetActor, missed, item)
   {
-    const hitMsg = "<b>hit</b> " + targetActor.name;
-    const missMsg = "<b>missed</b> " + targetActor.name;
+    const hitMsg = "<b>hit</b> " + targetActor.name + " with " + item.name;
+    const missMsg = "<b>missed</b> " + targetActor.name + " with " + item.name;
     
     ChatMessage.create(
     {

@@ -17,6 +17,9 @@ are free to share and adapt this material for any purpose,
 including commercially, as long as you give attribution.
 
 # Changelog
+**Upcoming 1.3.0**
+- Added weapon name to hit message
+
 **1.2.0**
 - Improved Clothing Compendium
 - Added missing label to Physique trait table
