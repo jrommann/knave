@@ -61,17 +61,7 @@ Hooks.once('init', async function() {
   Handlebars.registerHelper('isItemBroken', function(item)
   {
     if(item.type === "spell")
-    {
-      const used = item.data.used === "true";
-      const usable = true;
-      
-      if(item.isOwned)
-      {
-
-      }
-
-      return (used || !usable);
-    }
+      return (item.data.used === "true" || !item.data.spellUsable);
     else
     {
       if(item.data.quality)

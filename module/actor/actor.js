@@ -32,13 +32,16 @@ export class KnaveActor extends Actor {
     //clamp health
     if(data.health.value > data.health.max)
       data.health.value = data.health.max;
-
-    //calculate max inventory slots and used slots
+    
     data.inventorySlots.value = Number(data.abilities.con.value) + Number(10);
     let used = 0;
     for(let i of actorData.items)
     {
+      //calculate max inventory slots and used slots
       used += i.data.slots;
+      //check if actor can use spell based on level
+      if(i.type === "spell")
+        i.data.spellUsable = (Number(actorData.data.level.value) >= Number(i.data.level));
     }
     data.inventorySlots.used = used;
 
