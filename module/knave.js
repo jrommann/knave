@@ -60,9 +60,24 @@ Hooks.once('init', async function() {
 
   Handlebars.registerHelper('isItemBroken', function(item)
   {
-    if(item.data.quality)
-      return item.data.quality.value <= 0;
+    if(item.type === "spell")
+    {
+      const used = item.data.used === "true";
+      const usable = true;
+      
+      if(item.isOwned)
+      {
+
+      }
+
+      return (used || !usable);
+    }
     else
-      return false;
+    {
+      if(item.data.quality)
+        return item.data.quality.value <= 0;
+      else
+        return false;
+    }
   });
 });

@@ -26,6 +26,7 @@ including commercially, as long as you give attribution.
 - Added weapon name to hit message
 - **Added new Spell item type**
 - Updated spell compendium to use new item type spell
+- Used spells are red in players inventory
 
 **1.2.0**
 - Improved Clothing Compendium
