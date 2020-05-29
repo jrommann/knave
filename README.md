@@ -1,4 +1,9 @@
 # KNAVE v1.2.0
+**Author**: Rabid Baboon
+**Version**: v1.2.0
+**Foundry VTT Compatibility**: 0.5.5+
+**Translation Support**: None 
+
 KNAVE is a rules toolkit created by Ben Milton for running old school fantasy RPGs without classes. Adding, subtracting and modifying rules is both expected and encouraged. Knave’s features include:
 
 - **High compatibility with OSR games.** If you have a library of OSR bestiaries, adventure and spell books, little or no conversion is needed to use them with Knave.
@@ -19,6 +24,8 @@ including commercially, as long as you give attribution.
 # Changelog
 **Upcoming 1.3.0**
 - Added weapon name to hit message
+- **Added new Spell item type**
+- Updated spell compendium to use new item type spell
 
 **1.2.0**
 - Improved Clothing Compendium

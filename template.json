@@ -97,7 +97,7 @@
   },
   "Item":
   {
-    "types": ["item", "weaponMelee", "weaponRanged", "armor", "light"],
+    "types": ["item", "weaponMelee", "weaponRanged", "armor", "light", "spell"],
     "templates":
     {
       "base":
@@ -145,6 +145,12 @@
     {
       "templates": ["base"],
       "duration": 1
+    },
+    "spell":
+    {
+      "templates": ["base"],
+      "used": false,
+      "level": 0
     }
   }
 }
