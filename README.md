@@ -4,8 +4,9 @@
 **Foundry VTT Compatibility**: 0.5.5+
 **Translation Support**: None 
 
-KNAVE is a rules toolkit created by Ben Milton for running old school fantasy RPGs without classes. Adding, subtracting and modifying rules is both expected and encouraged. Knave’s features include:
+KNAVE is a rules toolkit created by Ben Milton for running old school fantasy RPGs without classes. Adding, subtracting and modifying rules is both expected and encouraged. 
 
+Knave’s features include:
 - **High compatibility with OSR games.** If you have a library of OSR bestiaries, adventure and spell books, little or no conversion is needed to use them with Knave.
 - **Fast to teach, easy to run.** If you are introducing a group of new players to OSR games, Knave allows them to make characters and understand all the rules in minutes.
 - **No classes.** Every PC is a Knave, a tomb-raiding, adventureseeking ne’er-do-well who wields a spell book just as easilyas a blade. This is an ideal system for players who like to switch up their character’s focus from time to time and don’t like being pigeonholed. A PC’s role in the party is determined largely by the equipment they carry.
@@ -28,7 +29,7 @@ including commercially, as long as you give attribution.
 - Updated spell compendium to use new item type spell
 - Used / Unusable spells are red in players inventory
 
-**1.2.0**
+**Current 1.2.0**
 - Improved Clothing Compendium
 - Added missing label to Physique trait table
 - Broken item's name turns red
