@@ -28,6 +28,8 @@ including commercially, as long as you give attribution.
 - **Added new Spell item type**
 - Updated spell compendium to use new item type spell
 - Used / Unusable spells are red in players inventory
+- Added Reaction macro whispered to current user
+- Added color to initiative and reaction roll tables
 
 **Current 1.2.0**
 - Improved Clothing Compendium
