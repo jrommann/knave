@@ -15,6 +15,8 @@ Questing Beast - <https://questingbeast.itch.io/>
 - All roll tables, spells, items, and rules from KNAVE are included in compendiums
 - Automatic inventory slot counting
 - Macro for initiative
+- Automatic weapon quality and ammo counting
+- Broken items and unusable spells turn red inventory
 
 # Changelog
 **Upcoming 1.3.0**
@@ -42,5 +44,5 @@ Questing Beast - <https://questingbeast.itch.io/>
 - Added weapon quality reduction on critical miss
 - Added ranged weapon ammo reduction on attack roll
 - Ranged weapons can't attack with out ammo
-- Added broken weapon message when quality is  0
+- Added broken weapon message when quality is 0
 - Broken weapons can't be rolled with
