@@ -1,8 +1,24 @@
 d20.svg - https://game-icons.net/1x1/delapouite/dice-twenty-faces-twenty.html
 crossed-sabres.svg - https://game-icons.net/1x1/lorc/crossed-sabres.html
 Armor - https://game-icons.net/tags/armor.html
-Clothing Fur - https://game-icons.net/1x1/delapouite/fur-shirt.html
-Clothing Noble - https://game-icons.net/1x1/delapouite/pirate-coat.html
-Cloting Standard - https://game-icons.net/1x1/lucasms/shirt.html
-Clothing Poor - https://game-icons.net/1x1/delapouite/t-shirt.html
-Clothing Winter - https://game-icons.net/1x1/delapouite/winter-gloves.html
+
+Clothing
+    Fur - https://game-icons.net/1x1/delapouite/fur-shirt.html
+    Noble - https://game-icons.net/1x1/delapouite/pirate-coat.html
+    Standard - https://game-icons.net/1x1/lucasms/shirt.html
+    Poor - https://game-icons.net/1x1/delapouite/t-shirt.html
+    Winter - https://game-icons.net/1x1/delapouite/winter-gloves.html
+
+Food
+    Animal - https://game-icons.net/1x1/delapouite/dog-bowl.html
+    Bacon - https://game-icons.net/1x1/skoll/ham-shank.html
+    Bread - https://game-icons.net/1x1/lorc/sliced-bread.html
+    Cheese - https://game-icons.net/1x1/lorc/cheese-wedge.html
+    Cider - https://game-icons.net/1x1/delapouite/barrel.html
+    Cod - https://game-icons.net/1x1/various-artists/salmon.html
+    Eggs - https://game-icons.net/1x1/lorc/egg-clutch.html
+    Flour - https://game-icons.net/1x1/delapouite/powder-bag.html
+    Fruit - https://game-icons.net/1x1/delapouite/berries-bowl.html
+    Garlic - https://game-icons.net/1x1/delapouite/garlic.html
+    Grain - https://game-icons.net/1x1/delapouite/grain.html
+    Herbs - https://game-icons.net/1x1/delapouite/herbs-bundle.html

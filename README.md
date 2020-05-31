@@ -27,6 +27,7 @@ Questing Beast - <https://questingbeast.itch.io/>
 - Added Reaction macro whispered to current user
 - Added color to initiative and reaction roll tables
 - Added icons for Armor and Clothing
+- Added icons for Food
 
 **Current 1.2.0**
 - Improved Clothing Compendium
