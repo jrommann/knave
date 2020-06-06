@@ -35,4 +35,23 @@ Light
     Torch - https://game-icons.net/1x1/delapouite/torch.html
     Lamp Oil - https://www.flaticon.com/authors/eucalyp"
     Tinderbox - https://game-icons.net/1x1/delapouite/matchbox.html
-    
+
+Weapons
+    Arrows - https://game-icons.net/1x1/lorc/arrow-cluster.html
+    Axe - https://game-icons.net/1x1/delapouite/hatchet.html
+    Battle Axe - https://game-icons.net/1x1/lorc/battle-axe.html
+    Bow - https://game-icons.net/1x1/lorc/high-shot.html
+    Crossbow - https://game-icons.net/1x1/carl-olsen/crossbow.html
+    Cudgel - https://www.flaticon.com/authors/good-ware
+    Dagger - https://game-icons.net/1x1/lorc/high-shot.html
+    Flail - https://game-icons.net/1x1/delapouite/flail.html
+    Halberd - https://game-icons.net/1x1/delapouite/sharp-halberd.html
+    Long Sword - https://game-icons.net/1x1/delapouite/two-handed-sword.html
+    Mace - https://www.flaticon.com/free-icon/mace_2614302?term=mace&page=2&position=36
+    Quiver - https://game-icons.net/1x1/delapouite/quiver.html
+    Sickle - https://game-icons.net/1x1/delapouite/sickle.html
+    Spear - https://www.flaticon.com/free-icon/spear_1083342?term=spear&page=2&position=9
+    Sling - https://game-icons.net/1x1/delapouite/sling.html
+    Staff - https://game-icons.net/1x1/delapouite/bo.html
+    Sword - https://www.flaticon.com/free-icon/sword_2928005?term=sword&page=1&position=22
+    War Hammer - https://game-icons.net/1x1/lorc/flat-hammer.html

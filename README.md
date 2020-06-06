@@ -28,6 +28,8 @@ Questing Beast - <https://questingbeast.itch.io/>
 - Added icons for Armor and Clothing
 - Added icons for Food
 - Added icons for Light
+- Added weapon icons
+- Added individual weapon items from the example names
 
 **Current 1.2.0**
 - Improved Clothing Compendium
