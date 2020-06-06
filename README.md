@@ -1,6 +1,5 @@
 # KNAVE v1.2.0
 **Author**: Rabid Baboon
-**Version**: v1.2.0
 **Foundry VTT Compatibility**: 0.5.5+
 **Translation Support**: None 
 
@@ -28,6 +27,7 @@ Questing Beast - <https://questingbeast.itch.io/>
 - Added color to initiative and reaction roll tables
 - Added icons for Armor and Clothing
 - Added icons for Food
+- Added icons for Light
 
 **Current 1.2.0**
 - Improved Clothing Compendium

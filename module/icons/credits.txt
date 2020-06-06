@@ -22,3 +22,17 @@ Food
     Garlic - https://game-icons.net/1x1/delapouite/garlic.html
     Grain - https://game-icons.net/1x1/delapouite/grain.html
     Herbs - https://game-icons.net/1x1/delapouite/herbs-bundle.html
+    Lard - https://game-icons.net/1x1/delapouite/butter.html
+    Onion - https://www.flaticon.com/authors/freepik
+    Salt - https://game-icons.net/1x1/lorc/powder.html
+    Spices - https://game-icons.net/1x1/lorc/cool-spices.html
+    Travel Rations - https://game-icons.net/1x1/delapouite/bindle.html
+    Wine/Ale Bottle - https://game-icons.net/1x1/delapouite/wine-bottle.html
+
+Light
+    Candle - https://game-icons.net/1x1/lorc/candle-light.html
+    Lantern - https://game-icons.net/1x1/delapouite/old-lantern.html
+    Torch - https://game-icons.net/1x1/delapouite/torch.html
+    Lamp Oil - https://www.flaticon.com/authors/eucalyp"
+    Tinderbox - https://game-icons.net/1x1/delapouite/matchbox.html
+    
