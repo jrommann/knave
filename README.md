@@ -1,4 +1,4 @@
-# KNAVE v1.3.0
+# KNAVE v1.3.1
 **Author**: Rabid Baboon 
 **Foundry VTT Compatibility**: 0.5.5+ 
 **Translation Support**: None  
@@ -21,7 +21,7 @@ Questing Beast - <https://questingbeast.itch.io/>
 - Broken items and unusable spells turn red inventory
 
 # Changelog
-**Current 1.3.0**
+**Current 1.3.1**
 - Added weapon name to hit message
 - **Added new Spell item type**
 - Updated spell compendium to use new item type spell
