@@ -55,3 +55,21 @@ Weapons
     Staff - https://game-icons.net/1x1/delapouite/bo.html
     Sword - https://www.flaticon.com/free-icon/sword_2928005?term=sword&page=1&position=22
     War Hammer - https://game-icons.net/1x1/lorc/flat-hammer.html
+
+Items
+    Bear Trap - https://game-icons.net/1x1/lorc/wolf-trap.html
+    Bedroll - https://www.flaticon.com/free-icon/bedroll_1937458?term=bed%20roll&page=1&position=4
+    Bellows - https://game-icons.net/1x1/delapouite/bellows.html
+    Black Grease - https://game-icons.net/1x1/lorc/round-bottom-flask.html
+    Bucket - https://game-icons.net/1x1/delapouite/empty-wood-bucket-handle.html
+    Book Blank  - https://game-icons.net/1x1/delapouite/empty-wood-bucket-handle.html
+    Book Reading - https://game-icons.net/1x1/lorc/bookmark.html
+    Bottle/Vial - https://game-icons.net/1x1/lorc/square-bottle.html
+    Caltrops - https://game-icons.net/1x1/delapouite/caltrops.html
+    Cards - https://game-icons.net/1x1/lorc/poker-hand.html
+
+    Crowbar - https://game-icons.net/1x1/delapouite/crowbar.html
+
+    Holy Water - https://game-icons.net/1x1/delapouite/holy-water.html
+
+    Rope - https://game-icons.net/1x1/delapouite/rope-coil.html
