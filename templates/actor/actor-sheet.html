@@ -14,8 +14,8 @@
         <div class="flex-group-center">
           <div class="abilities grid grid-3col">       
             <span class="resource-label">DEFENSE</span><span class="resource-label"></span><span class="resource-label">BONUS</span>  
-            <input type="text" name="data.armor.value" value="{{data.armor.value}}" data-dtype="Number"/>       
-            <span class="resource-label center">ARMOR</span>                 
+            <input type="text" name="data.armor.value" value="{{data.armor.value}}" data-dtype="Number"/>     
+            <button class="knave-armor-button resource-label armor" id="armor">ARMOR</button>              
             <span>{{data.armor.bonus}}</span>      
           </div>
         </div>
@@ -141,8 +141,10 @@
                       <div class="item-image item-roll" title="damage"><img src="systems/knave/module/icons/crossed-sabres.svg" title="damage" width="24" height="24"/></div>
                       {{/if}}                      
                       <h4 class="item-name {{#if (isItemBroken item)}}knave-encumbered{{/if}}">{{item.name}}</h4>
+                     
                     </span> 
                       <div class="item-controls">
+                          <a class="item-quality {{#if (isItemBroken item)}}knave-encumbered{{/if}}" title="Quality or Quantity">{{#if (hasQuality item)}}{{item.data.quality.value}}/{{item.data.quality.max}}{{else}}{{item.data.quantity}}{{/if}}&nbsp;&nbsp;</a>
                           <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
                           <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
                       </div>

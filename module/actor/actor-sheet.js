@@ -49,6 +49,7 @@ export class KnaveActorSheet extends ActorSheet
     //ability button clicked
     html.find('.knave-ability-button').click(ev => { this._onAbility_Clicked($(ev.currentTarget)[0].id); });
     html.find('.knave-morale-button').click(this._onMoraleCheck.bind(this));
+    html.find('.knave-armor-button').click(this._onArmorCheck.bind(this));
 
     // Update Inventory Item
     html.find('.item-edit').click(ev => {
@@ -145,6 +146,27 @@ export class KnaveActorSheet extends ActorSheet
     else
       messageHeader += '<span class="knave-ability-crit knave-ability-critSuccess">Is staying</span>';
     r.toMessage({ flavor: messageHeader});
+  }
+
+  _onArmorCheck(event)
+  {
+    let name = "ARMOR";
+    let score = this.actor.data.data.armor.bonus
+    event.preventDefault();
+    
+    let formula = `1d20+${score}`;
+    let r = new Roll(formula);    
+    r.roll();
+   
+    let returnCode = 0;
+    let messageHeader = "<b>" + name + "</b>";
+    if(r.dice[0].total === 1)
+      messageHeader += ' - <span class="knave-ability-crit knave-ability-critFailure">CRITICAL FAILURE!</span>';  
+    else if(r.dice[0].total === 20)
+      messageHeader += ' - <span class="knave-ability-crit knave-ability-critSuccess">CRITICAL SUCCESS!</span>';
+    
+    r.toMessage({speaker: ChatMessage.getSpeaker({ actor: this.actor }), flavor: messageHeader});
+    return r;
   }
 
   _onItemRoll(item, eventTarget)
