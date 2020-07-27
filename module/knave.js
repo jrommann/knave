@@ -70,4 +70,9 @@ Hooks.once('init', async function() {
         return false;
     }
   });
+
+  Handlebars.registerHelper('hasQuality', function(item)
+  {
+    return item.data.quality !== undefined;
+  });
 });
