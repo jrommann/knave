@@ -1,4 +1,4 @@
-**KNAVE v1.2.0**
+**KNAVE v1.4.0**
 
 **Author**: Rabid Baboon
 **Version**: v1.2.0
@@ -12,13 +12,6 @@
 KNAVE is a rules toolkit created by Ben Milton for running old school fantasy RPGs without classes. Adding, subtracting and modifying rules is both expected and encouraged.
 
 **Changes**   
-- Improved Clothing Compendium
-- Added missing label to Physique trait table
-- Broken item's name turns red
-- Item sheet updates if open and inventory roll buttons are used
-- **Added support for hit/miss of selected targets for weapons**
-- Fixed ammo count not saving when using attack button
-- Clamped health to max health
-- Clamped ammo between 0 and max
-- Fixed Quality not saving correctly
-- **Added support for damage of selected target for weapons**
+- Added Armor roll button. Thank you sunflowermans 
+- Added Quality / Quanity to inventory display. Thank you sunflowermans 
+- Added some item Icons
