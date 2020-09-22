@@ -172,6 +172,14 @@
   height: 100%;
 }
 
+.description-editor .tox {
+    height: auto;
+}
+
+.description-editor .tox-editor-container {
+  height: 193px;
+}
+
 .knave .tox .tox-editor-container {
   background: #fff;
 }
@@ -241,7 +249,7 @@
   text-align: right;
 }
 
-.knave .item-roll img:hover 
+.knave .item-roll img:hover
 {
     opacity: .5;
 }
@@ -256,22 +264,21 @@
   font-weight: bold;
   text-transform: uppercase;
 }
-.knave-ability-critSuccess 
+.knave-ability-critSuccess
 {
   color: green;
 }
-.knave-ability-critFailure 
+.knave-ability-critFailure
 {
   color: red;
 }
 
-.editor-content:empty:before 
+.editor-content:empty:before
 {
   content: "This text is editable";
 }
 
-.knave-character-description
-{  
+.knave-character-description {
   min-height: 200px;
   resize: none;
 }

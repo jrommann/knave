@@ -1,52 +1,52 @@
-<form class="{{cssClass}} flexcol" autocomplete="off">  
+<form class="{{cssClass}} flexcol" autocomplete="off">
   <div class="grid grid-3col">
     <!-- First Col -->
     <div class="flex-group-center">
       <div class="flex-group-center">
-        <div class="abilities grid grid-3col">         
-          <span class="resource-label">CURRENT</span> <span class="resource-label"></span><span class="resource-label">MAX</span>                                   
-          <input type="text" name="data.health.value" value="{{data.health.value}}" data-dtype="Number"/>  
-            <span class="resource-label center">HP</span>                                
+        <div class="abilities grid grid-3col">
+          <span class="resource-label">CURRENT</span> <span class="resource-label"></span><span class="resource-label">MAX</span>
+          <input type="text" name="data.health.value" value="{{data.health.value}}" data-dtype="Number"/>
+            <span class="resource-label center">HP</span>
             <input type="text" name="data.health.max" value="{{data.health.max}}" data-dtype="Number"/>
           </div>
         </div>
 
         <div class="flex-group-center">
-          <div class="abilities grid grid-3col">       
-            <span class="resource-label">DEFENSE</span><span class="resource-label"></span><span class="resource-label">BONUS</span>  
-            <input type="text" name="data.armor.value" value="{{data.armor.value}}" data-dtype="Number"/>     
-            <button class="knave-armor-button resource-label armor" id="armor">ARMOR</button>              
-            <span>{{data.armor.bonus}}</span>      
+          <div class="abilities grid grid-3col">
+            <span class="resource-label">DEFENSE</span><span class="resource-label"></span><span class="resource-label">BONUS</span>
+            <input type="text" name="data.armor.value" value="{{data.armor.value}}" data-dtype="Number"/>
+            <button class="knave-armor-button resource-label armor" id="armor">ARMOR</button>
+            <span>{{data.armor.bonus}}</span>
           </div>
         </div>
-      
+
         <div class="flex-group-center">
-          <div class="abilities grid grid-3col">   
-            <span class="resource-label">DEFENSE</span><span class="resource-label">ABILITY</span><span class="resource-label">BONUS</span>            
-              {{#each data.abilities as |ability key|}}            
-              <span class="ability-mod">{{numberFormat ability.defense decimals=0 sign=false}}</span>                              
+          <div class="abilities grid grid-3col">
+            <span class="resource-label">DEFENSE</span><span class="resource-label">ABILITY</span><span class="resource-label">BONUS</span>
+              {{#each data.abilities as |ability key|}}
+              <span class="ability-mod">{{numberFormat ability.defense decimals=0 sign=false}}</span>
               <button class="knave-ability-button resource-label {{key}}" id="{{key}}">{{key}}</button>
-              <input type="text" name="data.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number" maxlength="2" max="10" min="-10"/>            
+              <input type="text" name="data.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number" maxlength="2" max="10" min="-10"/>
               {{/each}}
           </div>
         </div>
 
         <div class="flex-group-center">
           <span class="resource-label">MOVEMENT</span>
-          <input type="text" name="data.movement" value="{{data.movement}}" data-dtype="String"/> 
+          <input type="text" name="data.movement" value="{{data.movement}}" data-dtype="String"/>
           <div class="abilities grid grid-3col">
             <span class="resource-label">MORALE</span>
-            <input type="text" name="data.morale.value" value="{{data.morale.value}}" data-dtype="Number"/>      
-            <button class="knave-morale-button resource-label">Check</button>    
+            <input type="text" name="data.morale.value" value="{{data.morale.value}}" data-dtype="Number"/>
+            <button class="knave-morale-button resource-label">Check</button>
           </div>
         </div>
-      </div>    
+      </div>
    <!--end first col-->
    <!--second col-->
       <div class="flex-group-center">
           <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="200" width="200"/>
           <div class="header-fields">
-              <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>  
+              <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
               <div class="abilities grid grid-col">
                 <div class="flex-group-center">
                 <label for="data.level.value" class="resource-label">LEVEL</label>
@@ -57,21 +57,21 @@
                 <input type="text" name="data.xp.value" value="{{data.xp.value}}" data-dtype="Number"/>
               </div>
               </div>
-          </div>          
+          </div>
           {{!-- Sheet Tab Navigation --}}
-          <nav class="decstription-tabs tabs" data-group="primary">
-            <a class="item" data-tab="description">Description</a>        
+          <nav class="description-tabs tabs" data-group="primary">
+            <a class="item" data-tab="description">Description</a>
             <a class="item" data-tab="traits">Traits</a>
-          </nav>          
-          <section class="decstription-tabs-content align-left">
+          </nav>
+          <section class="description-tabs-content align-left">
           {{!-- Traits Tab --}}
-          <div class="tab" data-group="primary" data-tab="traits">            
-            <div class="grid grid-2col">            
-              <span>            
+          <div class="tab" data-group="primary" data-tab="traits">
+            <div class="grid grid-2col">
+              <span>
                 <label for="data.traits.physique" class="resource-label">Physique</label>
                 <input type="text" name="data.traits.physique" value="{{data.traits.physique}}" data-dtype="string"/>
               </span>
-              <span> 
+              <span>
                 <label for="data.traits.face" class="resource-label">Face</label>
                 <input type="text" name="data.traits.face" value="{{data.traits.face}}" data-dtype="string"/>
               </span>
@@ -94,11 +94,11 @@
               <span>
                 <label for="data.traits.virtue" class="resource-label">Virtue</label>
                 <input type="text" name="data.traits.virtue" value="{{data.traits.virtue}}" data-dtype="string"/>
-              </span>    
+              </span>
               <span>
                 <label for="data.traits.vice" class="resource-label">Vice</label>
                 <input type="text" name="data.traits.vice" value="{{data.traits.vice}}" data-dtype="string"/>
-              </span>          
+              </span>
               <span>
                 <label for="data.traits.background" class="resource-label">Background</label>
                 <input type="text" name="data.traits.background" value="{{data.traits.background}}" data-dtype="string"/>
@@ -114,16 +114,17 @@
             </div>
           </div>
           {{!-- Description Tab --}}
-          <div class="tab" data-group="primary" data-tab="description">   
-              <textarea class="knave-character-description" name="data.biography" rows="5" title="Description"
-              data-dtype="String">{{#if data.biography}}{{data.biography}}{{/if}}</textarea>
-          </div> 
+          <div class="tab" data-group="primary" data-tab="description">
+            <div class="description-editor knave-character-description">
+                {{editor content=data.biography target="data.biography" button=true owner=owner editable=editable}}
+            </div>
+          </div>
         </section>
       </div>
      <!--end second col-->
      <!--third col-->
-      <div class="flex-group-center">        
-          {{!-- Owned Items Tab --}}      
+      <div class="flex-group-center">
+          {{!-- Owned Items Tab --}}
           <div class="items" data-group="primary" data-tab="items">
               <ol class="items-list">
                   <li class="item flexrow item-header">
@@ -135,14 +136,14 @@
                   </li>
               {{#each actor.items as |item id|}}
                   <li class="item flexrow" data-item-id="{{item._id}}">
-                      <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>                  
+                      <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
                       {{#if (isWeapon item)}}
                       <div class="item-image item-roll" title="attack"><img src="systems/knave/module/icons/d20.svg" title="attack" width="24" height="24"/></div>
                       <div class="item-image item-roll" title="damage"><img src="systems/knave/module/icons/crossed-sabres.svg" title="damage" width="24" height="24"/></div>
-                      {{/if}}                      
+                      {{/if}}
                       <h4 class="item-name {{#if (isItemBroken item)}}knave-encumbered{{/if}}">{{item.name}}</h4>
-                     
-                    </span> 
+
+                    </span>
                       <div class="item-controls">
                           <a class="item-quality {{#if (isItemBroken item)}}knave-encumbered{{/if}}" title="Quality or Quantity">{{#if (hasQuality item)}}{{item.data.quality.value}}/{{item.data.quality.max}}{{else}}{{item.data.quantity}}{{/if}}&nbsp;&nbsp;</a>
                           <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
@@ -151,9 +152,8 @@
                   </li>
               {{/each}}
               </ol>
-          </div>         
+          </div>
       </div>
-    <!--end third col-->      
+    <!--end third col-->
   </div>
 </form>
-

@@ -2,21 +2,21 @@
  * Extend the basic ActorSheet with some very simple modifications
  * @extends {ActorSheet}
  */
-export class KnaveActorSheet extends ActorSheet 
+export class KnaveActorSheet extends ActorSheet
 {
 
   #_hitTargets = new Set();
 
   /** @override */
-  static get defaultOptions() 
+  static get defaultOptions()
   {
-    return mergeObject(super.defaultOptions, 
+    return mergeObject(super.defaultOptions,
     {
       classes: ["knave", "sheet", "actor"],
       template: "systems/knave/templates/actor/actor-sheet.html",
       width: 1000,
       height: 620,
-      tabs: [{ navSelector: ".decstription-tabs", contentSelector: ".decstription-tabs-content", initial: "description" }]
+      tabs: [{ navSelector: ".description-tabs", contentSelector: ".description-tabs-content", initial: "description" }]
     });
   }
 
@@ -24,7 +24,7 @@ export class KnaveActorSheet extends ActorSheet
 
   /** @override */
   /*
-  getData() 
+  getData()
   {
     const data = super.getData();
     data.dtypes = ["String", "Number", "Boolean"];
@@ -36,7 +36,7 @@ export class KnaveActorSheet extends ActorSheet
   }
 */
   /** @override */
-  activateListeners(html) 
+  activateListeners(html)
   {
     super.activateListeners(html);
 
@@ -66,10 +66,10 @@ export class KnaveActorSheet extends ActorSheet
     });
 
     //inventory weapon rolls
-    html.find('.item-roll').click(ev => 
+    html.find('.item-roll').click(ev =>
     {
       const li = $(ev.currentTarget).parents(".item");
-      const item = this.actor.getOwnedItem(li.data("itemId"));  
+      const item = this.actor.getOwnedItem(li.data("itemId"));
       this._onItemRoll(item, ev.currentTarget);
     });
   }
@@ -81,7 +81,7 @@ export class KnaveActorSheet extends ActorSheet
    * @param {Event} event   The originating click event
    * @private
    */
-  _onItemCreate(event) 
+  _onItemCreate(event)
   {
     event.preventDefault();
     const header = event.currentTarget;
@@ -116,19 +116,19 @@ export class KnaveActorSheet extends ActorSheet
       case "int": score = this.actor.data.data.abilities.int.value; name="INT"; break;
       case "wis": score = this.actor.data.data.abilities.wis.value; name="WIS"; break;
       case "cha": score = this.actor.data.data.abilities.cha.value; name="CHA"; break;
-    }    
-  
+    }
+
     let formula = `1d20+${score}`;
-    let r = new Roll(formula);    
+    let r = new Roll(formula);
     r.roll();
-   
+
     let returnCode = 0;
     let messageHeader = "<b>" + name + "</b>";
     if(r.dice[0].total === 1)
-      messageHeader += ' - <span class="knave-ability-crit knave-ability-critFailure">CRITICAL FAILURE!</span>';  
+      messageHeader += ' - <span class="knave-ability-crit knave-ability-critFailure">CRITICAL FAILURE!</span>';
     else if(r.dice[0].total === 20)
       messageHeader += ' - <span class="knave-ability-crit knave-ability-critSuccess">CRITICAL SUCCESS!</span>';
-    
+
     r.toMessage({speaker: ChatMessage.getSpeaker({ actor: this.actor }), flavor: messageHeader});
     return r;
   }
@@ -136,10 +136,10 @@ export class KnaveActorSheet extends ActorSheet
   _onMoraleCheck(event)
   {
     event.preventDefault();
-    
-    let r = new Roll(`2d6`);    
+
+    let r = new Roll(`2d6`);
     r.roll();
-   
+
     let messageHeader = "";
     if(r.dice[0].total > this.actor.data.data.morale.value)
       messageHeader += '<span class="knave-ability-crit knave-ability-critFailure">Is fleeing</span>';
@@ -153,18 +153,18 @@ export class KnaveActorSheet extends ActorSheet
     let name = "ARMOR";
     let score = this.actor.data.data.armor.bonus
     event.preventDefault();
-    
+
     let formula = `1d20+${score}`;
-    let r = new Roll(formula);    
+    let r = new Roll(formula);
     r.roll();
-   
+
     let returnCode = 0;
     let messageHeader = "<b>" + name + "</b>";
     if(r.dice[0].total === 1)
-      messageHeader += ' - <span class="knave-ability-crit knave-ability-critFailure">CRITICAL FAILURE!</span>';  
+      messageHeader += ' - <span class="knave-ability-crit knave-ability-critFailure">CRITICAL FAILURE!</span>';
     else if(r.dice[0].total === 20)
       messageHeader += ' - <span class="knave-ability-crit knave-ability-critSuccess">CRITICAL SUCCESS!</span>';
-    
+
     r.toMessage({speaker: ChatMessage.getSpeaker({ actor: this.actor }), flavor: messageHeader});
     return r;
   }
@@ -177,24 +177,24 @@ export class KnaveActorSheet extends ActorSheet
       {
         const roll = this._onAbility_Clicked("str");
         if(roll.dice[0].total === 1)
-          this._weaponCriticalFailure(item);    
-          
+          this._weaponCriticalFailure(item);
+
         this._checkToHitTargets(roll, item);
       }
       else if(item.type === "weaponRanged" && !this._itemIsBroken(item))
           this._rangedAttackRoll(item);
     }
     else if(eventTarget.title === "damage" && !this._itemIsBroken(item))
-    {      
-      let r = new Roll(item.data.data.damageDice);    
-      r.roll();            
-      let messageHeader = "<b>" + item.name + "</b> damage";   
+    {
+      let r = new Roll(item.data.data.damageDice);
+      r.roll();
+      let messageHeader = "<b>" + item.name + "</b> damage";
       r.toMessage({ speaker: ChatMessage.getSpeaker({ actor: this.actor }), flavor: messageHeader});
 
       this.#_hitTargets.forEach((target)=>
       {
         this._doDamage(target, r.total);
-      });      
+      });
     }
   }
 
@@ -203,8 +203,8 @@ export class KnaveActorSheet extends ActorSheet
       item.data.data.quality.value -= 1;
       item.update({"data.quality.value":item.data.data.quality.value});
       if(item.data.data.quality.value <= item.data.data.quality.min)
-      {        
-        let content = '<span class="knave-ability-crit knave-ability-critFailure"><b>' + item.name + "</b> broke!</span>"; 
+      {
+        let content = '<span class="knave-ability-crit knave-ability-critFailure"><b>' + item.name + "</b> broke!</span>";
         ChatMessage.create({
           user: game.user._id,
           speaker: ChatMessage.getSpeaker({ actor: this.actor }),
@@ -226,7 +226,7 @@ export class KnaveActorSheet extends ActorSheet
   {
     if(item.data.data.quality.value <= 0)
     {
-      let content = '<span class="knave-ability-crit knave-ability-critFailure"><b>' + item.name + "</b> is broken!</span>"; 
+      let content = '<span class="knave-ability-crit knave-ability-critFailure"><b>' + item.name + "</b> is broken!</span>";
         ChatMessage.create({
           user: game.user._id,
           speaker: ChatMessage.getSpeaker({ actor: this.actor }),
@@ -246,8 +246,8 @@ export class KnaveActorSheet extends ActorSheet
       if(roll.dice[0].total === 1)
         this._weaponCriticalFailure(item);
 
-      item.data.data.ammo.value -= 1;   
-      item.update({"data.ammo.value": item.data.data.ammo.value});      
+      item.data.data.ammo.value -= 1;
+      item.update({"data.ammo.value": item.data.data.ammo.value});
       if(item.data.data.ammo.value <= 0)
         this._createNoAmmoMsg(item, true);
 
@@ -259,12 +259,12 @@ export class KnaveActorSheet extends ActorSheet
 
   _createNoAmmoMsg(item, outOfAmmo)
   {
-      let content = "<b>" + item.name + "</b> ";   
+      let content = "<b>" + item.name + "</b> ";
       if(outOfAmmo === true)
       { content += "is out of ammo!"; }
       else
       { content += "has no ammo!"; }
-      
+
         ChatMessage.create({
           user: game.user._id,
           speaker: ChatMessage.getSpeaker({ actor: this.actor }),
@@ -276,7 +276,7 @@ export class KnaveActorSheet extends ActorSheet
   {
     this.#_hitTargets.clear();
     game.users.current.targets.forEach((x)=>
-    { 
+    {
       if(roll.total > x.actor.data.data.armor.value)
       {
         this._createHitMsg(x.actor, false, item);
@@ -291,17 +291,17 @@ export class KnaveActorSheet extends ActorSheet
   {
     const hitMsg = "<b>hit</b> " + targetActor.name + " with " + item.name;
     const missMsg = "<b>missed</b> " + targetActor.name + " with " + item.name;
-    
+
     ChatMessage.create(
     {
       user: game.user._id,
       speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-      content: (missed ? missMsg : hitMsg), 
+      content: (missed ? missMsg : hitMsg),
     });
   }
 
   _doDamage(token, dmg)
-  {     
+  {
     const currentHP = token.actor.data.data.health.value;
     let newHP = currentHP - dmg;
     if(currentHP > 0 && newHP <= 0)
@@ -312,7 +312,7 @@ export class KnaveActorSheet extends ActorSheet
       {
         user: game.user._id,
         speaker: ChatMessage.getSpeaker({ actor: token.actor }),
-        content: msg, 
+        content: msg,
       });
     }
     else if(currentHP === 0)
@@ -322,10 +322,10 @@ export class KnaveActorSheet extends ActorSheet
       {
         user: game.user._id,
         speaker: ChatMessage.getSpeaker({ actor: token.actor }),
-        content: msg, 
+        content: msg,
       });
     }
 
-    token.actor.update({'data.health.value': newHP});       
+    token.actor.update({'data.health.value': newHP});
   }
 }
