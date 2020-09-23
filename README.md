@@ -1,4 +1,4 @@
-# KNAVE v1.4.0
+# KNAVE v1.5.0
 **Author**: Rabid Baboon 
 **Foundry VTT Compatibility**: 0.5.5+ 
 **Translation Support**: None  
@@ -21,12 +21,16 @@ Questing Beast - <https://questingbeast.itch.io/>
 - Broken items and unusable spells turn red inventory
 
 # Changelog
-**Current 1.4.0**
+**Coming Soon 1.5.0**   
+- Add wysiwyg to actor description. Thank you smcabrera 
+- More item icons
+
+**1.4.0**
 - Added Armor roll button. Thank you sunflowermans 
 - Added Quality / Quanity to inventory display. Thank you sunflowermans 
 - Added some item Icons
 
-**Current 1.3.1**
+**1.3.1**
 - Added weapon name to hit message
 - **Added new Spell item type**
 - Updated spell compendium to use new item type spell

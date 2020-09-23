@@ -173,11 +173,11 @@
 }
 
 .description-editor .tox {
-    height: auto;
+    min-height: 300px;
 }
 
 .description-editor .tox-editor-container {
-  height: 193px;
+  min-height: 300px;
 }
 
 .knave .tox .tox-editor-container {

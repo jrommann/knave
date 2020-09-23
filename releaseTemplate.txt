@@ -1,7 +1,7 @@
-**KNAVE v1.4.0**
+**KNAVE v1.5.0**
 
 **Author**: Rabid Baboon
-**Version**: v1.2.0
+**Version**: v1.5.0
 **Foundry VTT Compatibility**: 0.5.5+
 **Translation Support**: None 
 
@@ -12,6 +12,4 @@
 KNAVE is a rules toolkit created by Ben Milton for running old school fantasy RPGs without classes. Adding, subtracting and modifying rules is both expected and encouraged.
 
 **Changes**   
-- Added Armor roll button. Thank you sunflowermans 
-- Added Quality / Quanity to inventory display. Thank you sunflowermans 
-- Added some item Icons
+- Add wysiwyg to actor description. Thank you smcabrera 
