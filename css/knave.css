@@ -173,11 +173,13 @@
 }
 
 .description-editor .tox {
-    min-height: 300px;
+    min-height: 200px;
+    resize: vertical;
 }
 
 .description-editor .tox-editor-container {
-  min-height: 300px;
+  min-height: 200px;
+  resize: vertical;
 }
 
 .knave .tox .tox-editor-container {
@@ -280,7 +282,8 @@
 
 .knave-character-description {
   min-height: 200px;
-  resize: none;
+  height: 100%;
+  resize: both;
 }
 
 .knave-encumbered
