@@ -21,9 +21,9 @@ Questing Beast - <https://questingbeast.itch.io/>
 - Broken items and unusable spells turn red inventory
 
 # Changelog
-**Coming Soon 1.5.0**   
+**1.5.0**   
 - Add wysiwyg to actor description. Thank you smcabrera 
-- More item icons
+- Finished adding item icons
 
 **1.4.0**
 - Added Armor roll button. Thank you sunflowermans 

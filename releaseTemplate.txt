@@ -12,4 +12,5 @@
 KNAVE is a rules toolkit created by Ben Milton for running old school fantasy RPGs without classes. Adding, subtracting and modifying rules is both expected and encouraged.
 
 **Changes**   
-- Add wysiwyg to actor description. Thank you smcabrera 
+- Add wysiwyg to actor description. Thank you smcabrera
+- Finished adding item icons 
