@@ -2,3 +2,5 @@ knave/node_modules/
 .vscode/
 node_modules/
 rabid2Copy.ps1
+CopyToDeadbox.ps1
+CopyToLocal.ps1
