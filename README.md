@@ -1,6 +1,6 @@
-# KNAVE v1.5.0
+# KNAVE v1.6.0
 **Author**: Rabid Baboon 
-**Foundry VTT Compatibility6*: 0.8.6+ 
+**Foundry VTT Compatibility**: 0.8.6+ 
 **Translation Support**: None  
 
 Screenshots - <https://github.com/jrommann/knave/wiki/Screenshots>
