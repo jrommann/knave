@@ -49,7 +49,7 @@ export class KnaveActorSheet extends ActorSheet
     // Update Inventory Item
     html.find('.item-edit').click(ev => {
       const li = $(ev.currentTarget).parents(".item");
-      const item = this.actor.getOwnedItem(li.data("itemId"));
+      const item = this.actor.items.get(li.data("itemId"));
       item.sheet.render(true);
     });
 
@@ -64,7 +64,7 @@ export class KnaveActorSheet extends ActorSheet
     html.find('.item-roll').click(ev =>
     {
       const li = $(ev.currentTarget).parents(".item");
-      const item = this.actor.getOwnedItem(li.data("itemId"));
+      const item = this.actor.items.get(li.data("itemId"));
       this._onItemRoll(item, ev.currentTarget);
     });
   }
