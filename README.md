@@ -1,6 +1,6 @@
 # KNAVE v1.5.0
 **Author**: Rabid Baboon 
-**Foundry VTT Compatibility**: 0.5.5+ 
+**Foundry VTT Compatibility6*: 0.8.6+ 
 **Translation Support**: None  
 
 Screenshots - <https://github.com/jrommann/knave/wiki/Screenshots>
@@ -21,6 +21,9 @@ Questing Beast - <https://questingbeast.itch.io/>
 - Broken items and unusable spells turn red inventory
 
 # Changelog
+**1.6.0**
+ - Updated for FoundryVTT 0.8.6
+
 **1.5.0**   
 - Add wysiwyg to actor description. Thank you smcabrera 
 - Finished adding item icons
