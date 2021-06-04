@@ -55,9 +55,10 @@ export class KnaveActorSheet extends ActorSheet
 
     // Delete Inventory Item
     html.find('.item-delete').click(ev => {
-      const li = $(ev.currentTarget).parents(".item");
-      this.actor.items.delete(li.data("itemId"));
-      li.slideUp(200, () => this.render(false));      
+      const button = ev.currentTarget;
+      const li = button.closest(".item");
+      const item = this.actor.items.get(li?.dataset.itemId);
+      return item.delete();
     });
 
     //inventory weapon rolls
