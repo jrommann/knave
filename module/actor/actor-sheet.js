@@ -23,18 +23,13 @@ export class KnaveActorSheet extends ActorSheet
   /* -------------------------------------------- */
 
   /** @override */
-  /*
+  
   getData()
   {
-    const data = super.getData();
-    data.dtypes = ["String", "Number", "Boolean"];
-    for (let attr of Object.values(data.data.attributes))
-    {
-      attr.isCheckbox = attr.dtype === "Boolean";
-    }
-    return data;
+    let sheet = super.getData();
+    return sheet;
   }
-*/
+
   /** @override */
   activateListeners(html)
   {
@@ -110,12 +105,12 @@ export class KnaveActorSheet extends ActorSheet
     let name = "";
     switch(ability)
     {
-      case "str": score = this.actor.data.data.abilities.str.value; name="STR"; break;
-      case "dex": score = this.actor.data.data.abilities.dex.value; name="DEX"; break;
-      case "con": score = this.actor.data.data.abilities.con.value; name="CON"; break;
-      case "int": score = this.actor.data.data.abilities.int.value; name="INT"; break;
-      case "wis": score = this.actor.data.data.abilities.wis.value; name="WIS"; break;
-      case "cha": score = this.actor.data.data.abilities.cha.value; name="CHA"; break;
+      case "str": score = this.object.data.data.abilities.str.value; name="STR"; break;
+      case "dex": score = this.object.data.data.abilities.dex.value; name="DEX"; break;
+      case "con": score = this.object.data.data.abilities.con.value; name="CON"; break;
+      case "int": score = this.object.data.data.abilities.int.value; name="INT"; break;
+      case "wis": score = this.object.data.data.abilities.wis.value; name="WIS"; break;
+      case "cha": score = this.object.data.data.abilities.cha.value; name="CHA"; break;
     }
 
     let formula = `1d20+${score}`;
@@ -141,7 +136,7 @@ export class KnaveActorSheet extends ActorSheet
     r.roll();
 
     let messageHeader = "";
-    if(r.dice[0].total > this.actor.data.data.morale.value)
+    if(r.dice[0].total > this.object.data.data.morale.value)
       messageHeader += '<span class="knave-ability-crit knave-ability-critFailure">Is fleeing</span>';
     else
       messageHeader += '<span class="knave-ability-crit knave-ability-critSuccess">Is staying</span>';
@@ -151,7 +146,7 @@ export class KnaveActorSheet extends ActorSheet
   _onArmorCheck(event)
   {
     let name = "ARMOR";
-    let score = this.actor.data.data.armor.bonus
+    let score = this.object.data.data.armor.bonus
     event.preventDefault();
 
     let formula = `1d20+${score}`;

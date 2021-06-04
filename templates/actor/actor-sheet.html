@@ -5,25 +5,25 @@
       <div class="flex-group-center">
         <div class="abilities grid grid-3col">
           <span class="resource-label">CURRENT</span> <span class="resource-label"></span><span class="resource-label">MAX</span>
-          <input type="text" name="data.health.value" value="{{data.health.value}}" data-dtype="Number"/>
+          <input type="text" name="data.health.value" value="{{data.data.health.value}}" data-dtype="Number"/>
             <span class="resource-label center">HP</span>
-            <input type="text" name="data.health.max" value="{{data.health.max}}" data-dtype="Number"/>
+            <input type="text" name="data.health.max" value="{{data.data.health.max}}" data-dtype="Number"/>
           </div>
         </div>
 
         <div class="flex-group-center">
           <div class="abilities grid grid-3col">
             <span class="resource-label">DEFENSE</span><span class="resource-label"></span><span class="resource-label">BONUS</span>
-            <input type="text" name="data.armor.value" value="{{data.armor.value}}" data-dtype="Number"/>
+            <input type="text" name="data.armor.value" value="{{data.data.armor.value}}" data-dtype="Number"/>
             <button class="knave-armor-button resource-label armor" id="armor">ARMOR</button>
-            <span>{{data.armor.bonus}}</span>
+            <span>{{data.data.armor.bonus}}</span>
           </div>
         </div>
 
         <div class="flex-group-center">
           <div class="abilities grid grid-3col">
             <span class="resource-label">DEFENSE</span><span class="resource-label">ABILITY</span><span class="resource-label">BONUS</span>
-              {{#each data.abilities as |ability key|}}
+              {{#each data.data.abilities as |ability key|}}
               <span class="ability-mod">{{numberFormat ability.defense decimals=0 sign=false}}</span>
               <button class="knave-ability-button resource-label {{key}}" id="{{key}}">{{key}}</button>
               <input type="text" name="data.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number" maxlength="2" max="10" min="-10"/>
@@ -33,10 +33,10 @@
 
         <div class="flex-group-center">
           <span class="resource-label">MOVEMENT</span>
-          <input type="text" name="data.movement" value="{{data.movement}}" data-dtype="String"/>
+          <input type="text" name="data.movement" value="{{data.data.movement}}" data-dtype="String"/>
           <div class="abilities grid grid-3col">
             <span class="resource-label">MORALE</span>
-            <input type="text" name="data.morale.value" value="{{data.morale.value}}" data-dtype="Number"/>
+            <input type="text" name="data.morale.value" value="{{data.data.morale.value}}" data-dtype="Number"/>
             <button class="knave-morale-button resource-label">Check</button>
           </div>
         </div>
@@ -44,17 +44,17 @@
    <!--end first col-->
    <!--second col-->
       <div class="flex-group-center">
-          <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="200" width="200"/>
+          <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.data.name}}" height="200" width="200"/>
           <div class="header-fields">
-              <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
+              <h1 class="charname"><input name="name" type="text" value="{{actor.data.name}}" placeholder="Name"/></h1>
               <div class="abilities grid grid-col">
                 <div class="flex-group-center">
                 <label for="data.level.value" class="resource-label">LEVEL</label>
-                <input type="text" name="data.level.value" value="{{data.level.value}}" data-dtype="Number"/>
+                <input type="text" name="data.level.value" value="{{data.data.level.value}}" data-dtype="Number"/>
               </div>
               <div class="flex-group-center">
                 <label for="data.xp.value" class="resource-label">XP</label>
-                <input type="text" name="data.xp.value" value="{{data.xp.value}}" data-dtype="Number"/>
+                <input type="text" name="data.xp.value" value="{{data.data.xp.value}}" data-dtype="Number"/>
               </div>
               </div>
           </div>
@@ -69,54 +69,54 @@
             <div class="grid grid-2col">
               <span>
                 <label for="data.traits.physique" class="resource-label">Physique</label>
-                <input type="text" name="data.traits.physique" value="{{data.traits.physique}}" data-dtype="string"/>
+                <input type="text" name="data.traits.physique" value="{{data.data.traits.physique}}" data-dtype="string"/>
               </span>
               <span>
                 <label for="data.traits.face" class="resource-label">Face</label>
-                <input type="text" name="data.traits.face" value="{{data.traits.face}}" data-dtype="string"/>
+                <input type="text" name="data.traits.face" value="{{data.data.traits.face}}" data-dtype="string"/>
               </span>
               <span>
                 <label for="data.traits.skin" class="resource-label">Skin</label>
-                <input type="text" name="data.traits.skin" value="{{data.traits.skin}}" data-dtype="string"/>
+                <input type="text" name="data.traits.skin" value="{{data.data.traits.skin}}" data-dtype="string"/>
               </span>
               <span>
                 <label for="data.traits.hair" class="resource-label">Hair</label>
-                <input type="text" name="data.traits.hair" value="{{data.traits.hair}}" data-dtype="string"/>
+                <input type="text" name="data.traits.hair" value="{{data.data.traits.hair}}" data-dtype="string"/>
               </span>
               <span>
                 <label for="data.traits.clothing" class="resource-label">Clothing</label>
-                <input type="text" name="data.traits.clothing" value="{{data.traits.clothing}}" data-dtype="string"/>
+                <input type="text" name="data.traits.clothing" value="{{data.data.traits.clothing}}" data-dtype="string"/>
               </span>
               <span>
                 <label for="data.traits.speech" class="resource-label">Speech</label>
-                <input type="text" name="data.traits.speech" value="{{data.traits.speech}}" data-dtype="string"/>
+                <input type="text" name="data.traits.speech" value="{{data.data.traits.speech}}" data-dtype="string"/>
               </span>
               <span>
                 <label for="data.traits.virtue" class="resource-label">Virtue</label>
-                <input type="text" name="data.traits.virtue" value="{{data.traits.virtue}}" data-dtype="string"/>
+                <input type="text" name="data.traits.virtue" value="{{data.data.traits.virtue}}" data-dtype="string"/>
               </span>
               <span>
                 <label for="data.traits.vice" class="resource-label">Vice</label>
-                <input type="text" name="data.traits.vice" value="{{data.traits.vice}}" data-dtype="string"/>
+                <input type="text" name="data.traits.vice" value="{{data.data.traits.vice}}" data-dtype="string"/>
               </span>
               <span>
                 <label for="data.traits.background" class="resource-label">Background</label>
-                <input type="text" name="data.traits.background" value="{{data.traits.background}}" data-dtype="string"/>
+                <input type="text" name="data.traits.background" value="{{data.data.traits.background}}" data-dtype="string"/>
               </span>
               <span>
                 <label for="data.traits.misfortunes" class="resource-label">Misfortunes</label>
-                <input type="text" name="data.traits.misfortunes" value="{{data.traits.misfortunes}}" data-dtype="string"/>
+                <input type="text" name="data.traits.misfortunes" value="{{data.data.traits.misfortunes}}" data-dtype="string"/>
               </span>
               <span>
                 <label for="data.traits.alignment" class="resource-label">Alignment</label>
-                <input type="text" name="data.traits.alignment" value="{{data.traits.alignment}}" data-dtype="string"/>
+                <input type="text" name="data.traits.alignment" value="{{data.data.traits.alignment}}" data-dtype="string"/>
               </span>
             </div>
           </div>
           {{!-- Description Tab --}}
           <div class="tab" data-group="primary" data-tab="description">
             <div class="description-editor knave-character-description">
-                {{editor content=data.biography target="data.biography" button=true owner=owner editable=editable}}
+                {{editor content=data.data.biography target="data.biography" button=true owner=owner editable=editable}}
             </div>
           </div>
         </section>
@@ -128,7 +128,7 @@
           <div class="items" data-group="primary" data-tab="items">
               <ol class="items-list">
                   <li class="item flexrow item-header">
-                    <div class="item-name">Slots {{inventorySlots data.inventorySlots}}</div>
+                    <div class="item-name">Slots {{inventorySlots data.data.inventorySlots}}</div>
                     <div class="item-name">Name</div>
                     <div class="item-controls">
                       <a class="item-control item-create" title="Create item" data-type="item"><i class="fas fa-plus"></i> Add item</a>
@@ -145,7 +145,7 @@
 
                     </span>
                       <div class="item-controls">
-                          <a class="item-quality {{#if (isItemBroken item)}}knave-encumbered{{/if}}" title="Quality or Quantity">{{#if (hasQuality item)}}{{item.data.quality.value}}/{{item.data.quality.max}}{{else}}{{item.data.quantity}}{{/if}}&nbsp;&nbsp;</a>
+                          <a class="item-quality {{#if (isItemBroken item)}}knave-encumbered{{/if}}" title="Quality or Quantity">{{#if (hasQuality item)}}{{item.data.data.quality.value}}/{{item.data.data.quality.max}}{{else}}{{item.data.data.quantity}}{{/if}}&nbsp;&nbsp;</a>
                           <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
                           <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
                       </div>

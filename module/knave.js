@@ -21,8 +21,8 @@ Hooks.once('init', async function() {
   };
 
   // Define custom Entity classes
-  CONFIG.Actor.entityClass = KnaveActor;
-  CONFIG.Item.entityClass = KnaveItem;
+  CONFIG.Actor.documentClass = KnaveActor;
+  CONFIG.Item.documentClass = KnaveItem;
 
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
