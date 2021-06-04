@@ -56,8 +56,8 @@ export class KnaveActorSheet extends ActorSheet
     // Delete Inventory Item
     html.find('.item-delete').click(ev => {
       const li = $(ev.currentTarget).parents(".item");
-      this.actor.deleteOwnedItem(li.data("itemId"));
-      li.slideUp(200, () => this.render(false));
+      this.actor.items.delete(li.data("itemId"));
+      li.slideUp(200, () => this.render(false));      
     });
 
     //inventory weapon rolls
@@ -95,8 +95,8 @@ export class KnaveActorSheet extends ActorSheet
     // Remove the type from the dataset since it's in the itemData.type prop.
     delete itemData.data["type"];
 
-    // Finally, create the item!
-    return this.actor.createOwnedItem(itemData);
+    const cls = getDocumentClass("Item");
+    return cls.create(itemData, {parent: this.actor});    
   }
 
   _onAbility_Clicked(ability)
