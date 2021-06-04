@@ -30,7 +30,7 @@ export class KnaveItemSheet extends ItemSheet {
 
   /** @override */
   getData() {
-    const data = super.getData();
+    let data = super.getData();       
     data.dtypes = ["String", "Number", "Boolean"];
     return data;
   }
