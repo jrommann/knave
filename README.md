@@ -1,6 +1,6 @@
-# KNAVE v1.6.0
+# KNAVE v1.7.0
 **Author**: Rabid Baboon 
-**Foundry VTT Compatibility**: 0.8.6+ 
+**Foundry VTT Compatibility**: v9 
 **Translation Support**: None  
 
 Screenshots - <https://github.com/jrommann/knave/wiki/Screenshots>
@@ -21,6 +21,9 @@ Questing Beast - <https://questingbeast.itch.io/>
 - Broken items and unusable spells turn red inventory
 
 # Changelog
+**1.7.0**
+ - Updated for FoundryVTT v9
+
 **1.6.0**
  - Updated for FoundryVTT 0.8.6
 

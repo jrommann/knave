@@ -116,7 +116,7 @@ export class KnaveActorSheet extends ActorSheet
 
     let formula = `1d20+${score}`;
     let r = new Roll(formula);
-    r.roll();
+    r.evaluate({async: false});
 
     let returnCode = 0;
     let messageHeader = "<b>" + name + "</b>";
@@ -134,7 +134,7 @@ export class KnaveActorSheet extends ActorSheet
     event.preventDefault();
 
     let r = new Roll(`2d6`);
-    r.roll();
+    r.evaluate({async: false});
 
     let messageHeader = "";
     if(r.dice[0].total > this.object.data.data.morale.value)
@@ -152,7 +152,7 @@ export class KnaveActorSheet extends ActorSheet
 
     let formula = `1d20+${score}`;
     let r = new Roll(formula);
-    r.roll();
+    r.evaluate({async: false});
 
     let returnCode = 0;
     let messageHeader = "<b>" + name + "</b>";
@@ -183,7 +183,7 @@ export class KnaveActorSheet extends ActorSheet
     else if(eventTarget.title === "damage" && !this._itemIsBroken(item))
     {
       let r = new Roll(item.data.data.damageDice);
-      r.roll();
+      r.evaluate({async: false});
       let messageHeader = "<b>" + item.name + "</b> damage";
       r.toMessage({ speaker: ChatMessage.getSpeaker({ actor: this.actor }), flavor: messageHeader});
 
