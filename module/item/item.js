@@ -10,11 +10,11 @@ export class KnaveItem extends Item {
     super.prepareData();
 
     // Get the Item's data
-    const itemData = this.data;
-    const actorData = this.actor ? this.actor.data : {};
-    const data = itemData.data;
+    //const itemData = this.data;
+    const actorData = this.actor ? this.actor : {};
+    const data = this.system;
 
-    if(itemData.type === "weaponRanged")
+    if(this.type === "weaponRanged")
     {
       if(data.ammo.value > data.ammo.max)
         data.ammo.value = data.ammo.max;
