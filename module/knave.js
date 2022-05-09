@@ -61,11 +61,11 @@ Hooks.once('init', async function() {
   Handlebars.registerHelper('isItemBroken', function(item)
   {
     if(item.type === "spell")
-      return (item.data.data.used === "true" || !item.data.data.spellUsable);
+      return (item.system.used === "true" || !item.system.spellUsable);
     else
     {
-      if(item.data.data.quality)
-        return item.data.data.quality.value <= 0;
+      if(item.system.quality)
+        return item.system.quality.value <= 0;
       else
         return false;
     }
@@ -73,6 +73,6 @@ Hooks.once('init', async function() {
 
   Handlebars.registerHelper('hasQuality', function(item)
   {
-    return item.data.data.quality !== undefined;
+    return item.system.quality !== undefined;
   });
 });
