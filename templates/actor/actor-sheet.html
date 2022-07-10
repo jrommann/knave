@@ -44,9 +44,9 @@
    <!--end first col-->
    <!--second col-->
       <div class="flex-group-center">
-          <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.data.name}}" height="200" width="200"/>
+          <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="200" width="200"/>
           <div class="header-fields">
-              <h1 class="charname"><input name="name" type="text" value="{{actor.data.name}}" placeholder="Name"/></h1>
+              <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
               <div class="abilities grid grid-col">
                 <div class="flex-group-center">
                 <label for="system.level.value" class="resource-label">LEVEL</label>
@@ -145,7 +145,7 @@
 
                     </span>
                       <div class="item-controls">
-                          <a class="item-quality {{#if (isItemBroken item)}}knave-encumbered{{/if}}" title="Quality or Quantity">{{#if (hasQuality item)}}{{item.data.system.quality.value}}/{{item.data.system.quality.max}}{{else}}{{item.data.system.quantity}}{{/if}}&nbsp;&nbsp;</a>
+                          <a class="item-quality {{#if (isItemBroken item)}}knave-encumbered{{/if}}" title="Quality or Quantity">{{#if (hasQuality item)}}{{item.system.quality.value}}/{{item.system.quality.max}}{{else}}{{item.system.quantity}}{{/if}}&nbsp;&nbsp;</a>
                           <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
                           <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
                       </div>
