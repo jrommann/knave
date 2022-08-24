@@ -1,5 +1,6 @@
 {
   "id": "knave",
+  "name": "knave",
   "title": "KNAVE",
   "description": "KNAVE is a rules toolkit created by Ben Milton for running old school fantasy RPGs without classes.",
   "version": "1.8.0",
