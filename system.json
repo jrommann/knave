@@ -3,6 +3,8 @@
   "title": "KNAVE",
   "description": "KNAVE is a rules toolkit created by Ben Milton for running old school fantasy RPGs without classes.",
   "version": "1.8.0",
+  "minimumCoreVersion": "10",
+  "compatibleCoreVersion": "10",
   "compatibility": {
     "minimum": 10,
     "verified": "10.278"
