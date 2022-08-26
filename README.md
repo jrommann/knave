@@ -21,6 +21,9 @@ Questing Beast - <https://questingbeast.itch.io/>
 - Broken items and unusable spells turn red inventory
 
 # Changelog
+**1.7.1**
+ - Fixed macros
+
 **1.7.0**
  - Updated for FoundryVTT v9
 

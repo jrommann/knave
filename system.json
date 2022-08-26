@@ -2,7 +2,7 @@
   "name": "knave",
   "title": "KNAVE",
   "description": "KNAVE is a rules toolkit created by Ben Milton for running old school fantasy RPGs without classes.",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "minimumCoreVersion": "9.238",
   "compatibleCoreVersion": "9",
   "templateVersion": 2,
@@ -101,6 +101,6 @@
   "primaryTokenAttribute": "health",  
   "url": "https://github.com/jrommann/knave",
   "manifest": "https://raw.githubusercontent.com/jrommann/knave/foundry_v9/system.json",
-  "download": "https://github.com/jrommann/knave/archive/refs/tags/1.7.0_v9.zip",
+  "download": "https://github.com/jrommann/knave/archive/refs/tags/1.7.1_v9.zip",
   "license": "LICENSE.txt"
 }
