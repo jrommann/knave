@@ -1,9 +1,10 @@
 # KNAVE v1.8.0
-# **Author**: Rabid Baboon 
-# **Foundry VTT Compatibility**: v10 
-# **Translation Support**: None  
+- **Author**: Rabid Baboon 
+- **Foundry VTT Compatibility**: v10 
+- **Translation Support**: None  
 
-# **Foundry VTT Compatibility v9**: Use this manifest https://raw.githubusercontent.com/jrommann/knave/foundry_v9/system.json
+- **Foundry VTT Compatibility v9**
+- Use this manifest https://raw.githubusercontent.com/jrommann/knave/foundry_v9/system.json
 
 Screenshots - <https://github.com/jrommann/knave/wiki/Screenshots>
 
