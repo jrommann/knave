@@ -3,10 +3,11 @@
 - **Foundry VTT Compatibility**: v10 
 - **Translation Support**: None  
 
-- **Foundry VTT Compatibility v9**
+### Foundry VTT Compatibility v9
 - Use this manifest https://raw.githubusercontent.com/jrommann/knave/foundry_v9/system.json
 
-Screenshots - <https://github.com/jrommann/knave/wiki/Screenshots>
+### Screenshots
+<https://github.com/jrommann/knave/wiki/Screenshots>
 
 ### Description
 KNAVE is a rules toolkit created by Ben Milton for running old school fantasy RPGs without classes. Adding, subtracting and modifying rules is both expected and encouraged. 
