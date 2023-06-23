@@ -53,6 +53,13 @@ export class KnaveActorSheet extends ActorSheet
       item.sheet.render(true);
     });
 
+    // view Inventory Item
+    html.find('.item-view').click(ev => {
+      const li = $(ev.currentTarget).parents(".item");
+      const item = this.actor.items.get(li.data("itemId"));        
+      item.sheet.render(true);
+    });
+
     // Delete Inventory Item
     html.find('.item-delete').click(ev => {
       const button = ev.currentTarget;
