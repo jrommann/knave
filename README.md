@@ -30,6 +30,7 @@ Questing Beast - <https://questingbeast.itch.io/>
 # Changelog
 **1.9.0**
  - Updated for FoundryVTT v11
+ - Item name is clickable and will open the item's sheet
 
 **1.8.0**
  - Updated for FoundryVTT v10
