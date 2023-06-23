@@ -1,10 +1,13 @@
-# KNAVE v1.8.0
+# KNAVE (Unoffical) v1.9.0
 - **Author**: Rabid Baboon 
-- **Foundry VTT Compatibility**: v10 
+- **Foundry VTT Compatibility**: v11 
 - **Translation Support**: None  
 
+### Foundry VTT Compatibility v10
+- Use this manifest <https://raw.githubusercontent.com/jrommann/knave/v10_Support/system.json>
+
 ### Foundry VTT Compatibility v9
-- Use this manifest https://raw.githubusercontent.com/jrommann/knave/foundry_v9/system.json
+- Use this manifest <https://raw.githubusercontent.com/jrommann/knave/foundry_v9/system.json>
 
 ### Screenshots
 <https://github.com/jrommann/knave/wiki/Screenshots>
@@ -25,6 +28,9 @@ Questing Beast - <https://questingbeast.itch.io/>
 - Broken items and unusable spells turn red inventory
 
 # Changelog
+**1.9.0**
+ - Updated for FoundryVTT v11
+
 **1.8.0**
  - Updated for FoundryVTT v10
  - Fixed macros

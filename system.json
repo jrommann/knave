@@ -3,12 +3,12 @@
   "name": "knave",
   "title": "KNAVE",
   "description": "KNAVE is a rules toolkit created by Ben Milton for running old school fantasy RPGs without classes.",
-  "version": "1.8.0",
-  "minimumCoreVersion": "10",
-  "compatibleCoreVersion": "10",
+  "version": "1.9.0",
+  "minimumCoreVersion": "11",
+  "compatibleCoreVersion": "11",
   "compatibility": {
-    "minimum": 10,
-    "verified": "10.278"
+    "minimum": 11,
+    "verified": "11.302"
   },
   "templateVersion": 2,
   "author": "Rabid Baboon",
@@ -21,84 +21,97 @@
       "label": "Armor",
       "system": "knave",
       "path": "./packs/armor.db",
-      "entity": "Item"
+      "type": "Item",
+      "flags": {}
     },
     {
       "name": "clothing",
       "label": "Cothing",
       "system": "knave",
       "path": "./packs/clothing.db",
-      "entity": "Item"
+      "type": "Item",
+      "flags": {}
     },
     {
       "name": "food",
       "label": "Food",
       "system": "knave",
       "path": "./packs/food.db",
-      "entity": "Item"
+      "type": "Item",
+      "flags": {}
     },
     {
       "name": "items",
       "label": "Items",
       "system": "knave",
       "path": "./packs/items.db",
-      "entity": "Item"
+      "type": "Item",
+      "flags": {}
     },
     {
       "name": "light",
       "label": "Light",
       "system": "knave",
       "path": "./packs/light.db",
-      "entity": "Item"
+      "type": "Item",
+      "flags": {}
+      
     },
     {
       "name": "macros",
       "label": "Macros",
       "system": "knave",
       "path": "./packs/macros.db",
-      "entity": "Macro"
+      "type": "Macro",
+      "flags": {}
     },
     {
       "name": "other",
       "label": "Other",
       "system": "knave",
       "path": "./packs/other.db",
-      "entity": "RollTable"
+      "type": "RollTable",
+      "flags": {}
     },
     {
       "name": "rules",
       "label": "Rules",
       "system": "knave",
       "path": "./packs/rules.db",
-      "entity": "JournalEntry"
+      "type": "JournalEntry",
+      "flags": {}
     },
     {
       "name": "spells",
       "label": "Spells",
       "system": "knave",
       "path": "./packs/spells.db",
-      "entity": "Item"
+      "type": "Item",
+      "flags": {}
     },
     {
       "name": "starting-gear",
       "label": "Starting Gear",
       "system": "knave",
       "path": "./packs/starting-gear.db",
-      "entity": "RollTable"
+      "type": "RollTable",
+      "flags": {}
     },
     {
       "name": "traits",
       "label": "Traits",
       "system": "knave",
       "path": "./packs/traits.db",
-      "entity": "RollTable"
+      "type": "RollTable",
+      "flags": {}
     },
     {
       "name": "weapons",
       "label": "Weapons",
       "system": "knave",
-      "path": "./packs/weapons.db",
-      "entity": "Item"
+      "path": "./packs/weapons.db",      
+      "type": "Item",
+      "flags": {}
     }
   ],  
   "gridDistance": 5,
@@ -106,6 +119,6 @@
   "primaryTokenAttribute": "health",  
   "url": "https://github.com/jrommann/knave",
   "manifest": "https://raw.githubusercontent.com/jrommann/knave/master/system.json",
-  "download": "https://github.com/jrommann/knave/archive/1.8.0.zip",
+  "download": "https://github.com/jrommann/knave/archive/1.9.0.zip",
   "license": "LICENSE.txt"
 }

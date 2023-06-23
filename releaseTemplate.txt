@@ -1,8 +1,8 @@
-**KNAVE v1.8.0**
+**KNAVE v1.9.0**
 
 **Author**: Rabid Baboon
-**Version**: v1.8.0
-**Foundry VTT Compatibility**: v10
+**Version**: v1.9.0
+**Foundry VTT Compatibility**: v11
 **Translation Support**: None 
 
 **Project:** https://github.com/jrommann/knave
@@ -12,4 +12,4 @@
 KNAVE is a rules toolkit created by Ben Milton for running old school fantasy RPGs without classes. Adding, subtracting and modifying rules is both expected and encouraged.
 
 **Changes**   
- - Updated for FoundryVTT v10
+ - Updated for FoundryVTT v11
