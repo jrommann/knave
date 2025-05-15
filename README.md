@@ -1,3 +1,5 @@
+# NO LONGER IN DEVELOPMENT. WILL NOT BE UPDATED ANYMORE.
+
 # KNAVE (Unoffical) v1.9.0
 - **Author**: Rabid Baboon 
 - **Foundry VTT Compatibility**: v11 
